@@ -1,0 +1,32 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>쿠폰 적용</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="coupon-container">
+  <h1>쿠폰 적용</h1>
+  <p class="sub">쿠폰 코드를 입력하고 <strong>적용하기</strong>를 눌러주세요.</p>
+
+  <!-- 🔹 쿠폰 입력 폼 -->
+  <form id="couponForm">
+    <label for="couponCode">쿠폰 코드</label>
+    <div class="row">
+      <input type="text" id="couponCode" placeholder="예: SAVE10" required>
+      <button type="submit" class="apply-btn">적용하기</button>
+    </div>
+  </form>
+
+  <!-- 🔹 결과 표시 -->
+  <section id="resultBox" class="result-box hidden">
+    <h2>할인 결과</h2>
+    <p id="resultText">쿠폰을 확인 중...</p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* ==============================================
+   ✍️ 마크다운 미리보기 스타일
+   - 2분할 레이아웃 / 부드러운 테마
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f8fafc;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.markdown-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 900px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 상단 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+}
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+header button {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+header button:hover {
+  background: #f1f5f9;
+}
+
+/* 편집 영역 */
+.editor {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+textarea {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-right: 1px solid #e5e7eb;
+  resize: none;
+  font-size: 14px;
+  font-family: Consolas, monospace;
+  outline: none;
+}
+.preview {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f9fafb;
+}
+
+/* Markdown 렌더링 스타일 */
+.preview h1 { font-size: 24px; color: #2563eb; }
+.preview h2 { font-size: 20px; color: #1d4ed8; }
+.preview h3 { font-size: 18px; color: #374151; }
+.preview p { margin-bottom: 10px; line-height: 1.6; }
+.preview code {
+  background: #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+}
+.preview pre {
+  background: #1e293b;
+  color: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.preview ul {
+  padding-left: 20px;
+}
+.preview a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.preview a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 */
+@media (max-width: 700px) {
+  .editor {
+    flex-direction: column;
+  }
+  textarea {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}

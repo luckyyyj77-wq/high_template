@@ -1,0 +1,6 @@
+
+:root{--maxw:1200px;--code:#0f172a;--bg:#fff;--text:#111}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:var(--maxw);margin:0 auto;padding:20px}
+.md h1{font-size:2rem}.md h2{font-size:1.6rem}.md pre{background:var(--code);color:#e2e8f0;padding:12px;border-radius:8px}
+.md table{border-collapse:collapse;width:100%}.md th,.md td{border:1px solid #e5e7eb;padding:8px}

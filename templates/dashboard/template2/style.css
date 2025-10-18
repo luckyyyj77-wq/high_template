@@ -1,0 +1,127 @@
+/* Dashboard 02 - Light/Dark Mode Toggle Styles */
+
+/* 1. 기본 변수 (라이트 모드) */
+:root {
+    --primary-color: #059669;       /* Emerald Green */
+    --text-color: #1f2937;
+    --bg-color: #f7f9fc;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+/* 2. 다크 모드 변수 오버라이드 */
+.dark-mode {
+    --primary-color: #34d399;       /* Lighter Green for dark BG */
+    --text-color: #f3f4f6;          /* Light text */
+    --bg-color: #1f2937;            /* Dark background */
+    --card-bg: #374151;             /* Dark card background */
+    --border-color: #4b5563;        /* Darker border */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* 테마 전환 애니메이션 */
+}
+
+/* 3. 사이드바 및 레이아웃 (Dashboard 01과 유사하나 색상 변수 사용) */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--card-bg);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-item a {
+    color: var(--text-color);
+}
+
+.nav-item:hover a, .nav-item.active a {
+    background-color: var(--primary-color);
+    color: var(--card-bg); /* 글자색은 카드 배경색(흰색)으로 */
+}
+
+/* 4. 테마 토글 버튼 스타일 */
+.theme-toggle-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* 5. 상단 바 및 콘텐츠 */
+.main-content {
+    margin-left: 260px;
+    flex-grow: 1;
+}
+
+.top-bar {
+    background: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.content-area {
+    padding: 2rem;
+}
+
+/* 6. 통계 카드 (간결 스타일) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+.stat-card .value {
+    color: var(--primary-color);
+}
+
+/* 7. 경고/공지 박스 */
+.alert-box {
+    padding: 1rem;
+    background: var(--border-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* 8. 미디어 쿼리 (768px 이하에서 1열) */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        /* 모바일 숨김 로직은 JS로 처리 */
+        display: none;
+    }
+}

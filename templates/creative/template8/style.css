@@ -1,0 +1,38 @@
+/* ============================================
+   Scroll Reveal 기본 스타일
+================================================ */
+
+html,body{
+  margin:0;
+  font-family:"Noto Sans KR",sans-serif;
+  background:#0b0f1c;
+  color:#fff;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity 0.8s ease, transform 0.8s ease;
+}
+
+section h1{
+  font-size:48px;
+  margin-bottom:12px;
+  color:#22d3ee;
+}
+section p{
+  font-size:16px;
+  color:rgba(255,255,255,0.8);
+}
+
+section.active{
+  opacity:1;
+  transform:translateY(0);
+}

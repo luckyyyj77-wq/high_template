@@ -1,0 +1,48 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>통계 대시보드</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>통계 대시보드</h1>
+  <div class="filters">
+    <label>기간 선택:</label>
+    <select id="dateRange">
+      <option value="7">최근 7일</option>
+      <option value="30">최근 30일</option>
+      <option value="90">최근 90일</option>
+    </select>
+  </div>
+</header>
+
+<main class="analytics">
+  <!-- 🔹 요약 지표 카드 -->
+  <section class="summary">
+    <div class="card">
+      <h2>방문자 수</h2>
+      <p class="value" id="visitors">0</p>
+    </div>
+    <div class="card">
+      <h2>총 매출</h2>
+      <p class="value" id="revenue">₩0</p>
+    </div>
+    <div class="card">
+      <h2>전환율</h2>
+      <p class="value" id="conversion">0%</p>
+    </div>
+  </section>
+
+  <!-- 🔹 차트 영역 -->
+  <section class="chart-section">
+    <h2>기간별 매출 추이</h2>
+    <canvas id="chartCanvas" width="600" height="280"></canvas>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

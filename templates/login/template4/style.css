@@ -1,0 +1,95 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* Login 04 - Social Login Tabs Styles */
+:root {
+    --primary-color: #059669; /* Accent Green */
+    --light-bg: #f0fdf4; /* Very light green background */
+    --google-color: #db4437;
+    --kakao-color: #fee500;
+    --naver-color: #03c75a;
+}
+
+body {
+    background-color: var(--light-bg);
+    /* ... (기본 중앙 정렬 스타일 유지) ... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container.tab-layout {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 탭 버튼 스타일링 */
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.tab-buttons button {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #6b7280;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-buttons button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* 탭 콘텐츠 */
+.tab-content {
+    transition: opacity 0.5s;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* 소셜 버튼 스타일링 */
+.social-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    transition: opacity 0.3s;
+}
+
+.social-btn i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.social-btn.google {
+    background-color: var(--google-color);
+}
+
+.social-btn.kakao {
+    background-color: var(--kakao-color);
+    color: #3c1e1e; /* 카카오 고유 텍스트 색상 */
+}
+
+.social-btn.naver {
+    background-color: var(--naver-color);
+}
+/* ... (나머지 기본 입력 그룹/버튼 스타일은 Login 01/02와 유사) ... */

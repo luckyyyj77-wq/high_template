@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>단위 변환기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="converter-container">
+  <h1>⚖️ 단위 변환기</h1>
+
+  <!-- 🔹 카테고리 전환 -->
+  <div class="category">
+    <button id="lenBtn" class="active">길이</button>
+    <button id="massBtn">무게</button>
+    <button id="tempBtn">온도</button>
+  </div>
+
+  <!-- 🔹 변환 입력 -->
+  <div class="converter">
+    <input type="number" id="inputValue" placeholder="값 입력">
+    <select id="inputUnit"></select>
+    <span>→</span>
+    <select id="outputUnit"></select>
+    <input type="text" id="outputValue" readonly>
+  </div>
+
+  <p id="formula"></p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

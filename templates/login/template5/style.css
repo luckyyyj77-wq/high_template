@@ -1,0 +1,83 @@
+/* Login 05 - Brand Focus Pastel Styles */
+:root {
+    --brand-color: #34d399; /* Brand Green */
+    --pastel-bg-start: #ecfdf5; /* Very Light Green */
+    --pastel-bg-end: #f0fdfa;
+    --card-shadow-color: rgba(52, 211, 153, 0.2);
+}
+
+body {
+    background: linear-gradient(180deg, var(--pastel-bg-start), var(--pastel-bg-end)); /* 파스텔 그라데이션 */
+    /* ... (기본 중앙 정렬 스타일 유지) ... */
+    min-height: 100vh;
+}
+
+/* 브랜드 배너 스타일 */
+.brand-banner {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #d1fae5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.brand-banner .logo-area h1 {
+    color: var(--brand-color);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.brand-banner .slogan-text {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* 메인 로그인 영역 */
+.login-main-area {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.login-card.pastel {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--card-shadow-color);
+    text-align: center;
+}
+
+/* 입력 필드 */
+.input-group input {
+    /* ... (기본 입력 필드 스타일 유지) ... */
+    border: 2px solid #e5e7eb;
+}
+
+.input-group input:focus {
+    border-color: var(--brand-color);
+    box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
+}
+
+/* 파스텔 버튼 */
+.pastel-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--brand-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.footer-options {
+    margin-top: 2rem;
+}
+
+.footer-options a {
+    color: var(--brand-color);
+    text-decoration: none;
+}
+/* ... (모바일 대응 스타일은 중앙 카드형과 유사) ... */

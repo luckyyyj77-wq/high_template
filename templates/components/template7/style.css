@@ -1,0 +1,86 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* =============================================
+   🧩 아코디언 스타일
+   - 부드러운 열림/닫힘 + 아이콘 회전
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 24px;
+}
+
+.accordion {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* 개별 아이템 */
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* 헤더 버튼 */
+.accordion-header {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.accordion-header:hover {
+  background: #f3f4f6;
+}
+.icon {
+  transition: transform 0.3s ease;
+  font-size: 16px;
+  color: #2563eb;
+}
+
+/* 본문 영역 */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  background: #f9fafb;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 20px;
+}
+.accordion-body p {
+  margin: 0;
+  padding: 12px 0;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 열림 상태 */
+.accordion-item.active .accordion-body {
+  max-height: 200px; /* 충분한 높이 */
+  padding: 12px 20px;
+}
+.accordion-item.active .icon {
+  transform: rotate(180deg);
+}

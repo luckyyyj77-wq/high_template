@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>모달 로그인</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="openLogin" class="open-btn">로그인 열기</button>
+
+  <!-- 모달 영역 -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <h2>로그인</h2>
+      <p class="sub">계정 정보를 입력하세요</p>
+
+      <form id="modalForm">
+        <label>이메일</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+        <label>비밀번호</label>
+        <input id="password" type="password" placeholder="••••••••" required>
+        <div class="row">
+          <label><input type="checkbox"> 자동 로그인</label>
+          <a href="#" class="link">비밀번호 찾기</a>
+        </div>
+        <button type="submit" class="btn">로그인</button>
+      </form>
+
+      <p class="bottom">계정이 없나요? <a href="#">회원가입</a></p>
+      <button id="closeLogin" class="close-btn">×</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

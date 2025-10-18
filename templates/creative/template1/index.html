@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Creative Showcase</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 🔹 배경 애니메이션 (블롭/그라디언트) -->
+<div class="bg">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">✦</span>
+    <strong>CREATIVE</strong>
+  </div>
+  <div class="actions">
+    <button id="themeToggle" aria-label="테마 전환">🌙</button>
+  </div>
+</header>
+
+<main>
+  <!-- 🔹 Hero 영역 -->
+  <section class="hero">
+    <h1 class="typewriter">
+      <span id="typed"></span>
+      <span class="caret">|</span>
+    </h1>
+    <p class="sub">가볍고, 아름답고, 바로 쓰는 인터랙션 템플릿</p>
+
+    <div class="cta">
+      <button class="magnetic" id="btnExplore">🚀 지금 둘러보기</button>
+      <button class="magnetic ghost" id="btnCelebrate">🎉 축하샷</button>
+    </div>
+
+    <!-- 컨페티 캔버스 -->
+    <canvas id="confetti"></canvas>
+  </section>
+
+  <!-- 🔹 패럴랙스 카드 그리드 -->
+  <section class="grid">
+    <article class="card parallax" data-depth="0.04">
+      <h3>Glass UI</h3>
+      <p>살짝 블러를 준 글래스 모피즘 카드.</p>
+      <a class="chip">#glass</a>
+    </article>
+    <article class="card parallax" data-depth="0.06">
+      <h3>Micro-Interaction</h3>
+      <p>호버·포커스에 반응하는 네온 글로우.</p>
+      <a class="chip">#neon</a>
+    </article>
+    <article class="card parallax" data-depth="0.03">
+      <h3>Parallax</h3>
+      <p>마우스 움직임에 따라 깊이감 부여.</p>
+      <a class="chip">#motion</a>
+    </article>
+    <article class="card parallax" data-depth="0.05">
+      <h3>Theme</h3>
+      <p>라이트/다크 토글, 로컬 저장.</p>
+      <a class="chip">#theme</a>
+    </article>
+  </section>
+
+  <!-- 🔹 푸터 라이트 카피 -->
+  <footer class="foot">
+    <p>© 2025 Creative Kit — made for quick copy & paste.</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* Dashboard 04 - Card-Based Performance Styles */
+
+/* 1. 기본 변수 */
+:root {
+    --primary-color: #3b82f6;       /* Blue Accent */
+    --text-color: #1f2937;
+    --bg-color: #eef1f5;            /* Light background */
+    --card-bg: #ffffff;
+    --border-color: #d1d5db;
+}
+
+body {
+    /* ... (기본 스타일 유지) ... */
+    background-color: var(--bg-color);
+}
+
+/* 2. 레이아웃 (컴팩트) */
+.dashboard-container {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 0; /* 사이드바를 최소화했다고 가정 */
+    flex-grow: 1;
+}
+
+/* 3. 상단 바 및 기간 선택 */
+.top-bar {
+    justify-content: flex-end;
+    background: var(--card-bg);
+}
+
+.date-selector select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* 4. KPI 카드 그리드 */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-card .label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.kpi-card .value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.kpi-card .trend {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.kpi-card .trend.up { color: #10b981; } /* Green */
+.kpi-card .trend.down { color: #ef4444; } /* Red */
+
+/* 5. 그래프 시각화 섹션 */
+.chart-section-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 라인 차트: 2/3, 도넛 차트: 1/3 */
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.section {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* 차트 캔버스 (Chart.js 목업) */
+.chart-canvas {
+    height: 300px; /* 라인 차트 높이 */
+    margin-top: 1rem;
+}
+
+.small-chart {
+    height: 250px; /* 도넛 차트 높이 */
+}
+
+/* 6. 상세 리스트 */
+.detail-list-section {
+    grid-column: 1 / 3; /* 전체 너비 사용 */
+}
+
+#channelList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#channelList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+#channelList li span {
+    font-weight: 600;
+}
+
+
+/* 7. 미디어 쿼리 */
+@media (max-width: 1024px) {
+    .chart-section-grid {
+        grid-template-columns: 1fr; /* 1열 */
+    }
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}

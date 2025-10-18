@@ -1,0 +1,1 @@
+// Template 9: Optional image compare slider can be added later.

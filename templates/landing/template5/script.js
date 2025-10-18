@@ -1,0 +1,1 @@
+// Template 5: Optional scroll-based effects can be added here.

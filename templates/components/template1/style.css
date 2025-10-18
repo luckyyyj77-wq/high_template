@@ -1,0 +1,214 @@
+/* Components 01 - Alerts and Modals Styles */
+
+/* 1. 글로벌 및 변수 설정 */
+:root {
+    --primary-color: #3b82f6;       /* Blue */
+    --success-color: #10b981;       /* Green */
+    --info-color: #0ea5e9;          /* Cyan */
+    --warning-color: #f59e0b;       /* Amber */
+    --danger-color: #ef4444;        /* Red */
+    --text-color: #1f2937;
+    --bg-color: #f7f9fc;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+.comp-header, .comp-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.primary-btn { background-color: var(--primary-color); color: #fff; }
+.secondary-btn { background-color: #e5e7eb; color: var(--text-color); }
+.success-btn { background-color: var(--success-color); color: #fff; }
+.danger-btn { background-color: var(--danger-color); color: #fff; }
+.warning-btn { background-color: var(--warning-color); color: #fff; }
+
+/* 2. 경고창 (Alerts) 스타일 */
+.alert {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border-left: 5px solid;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.alert i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.alert-content {
+    flex-grow: 1;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.6;
+}
+
+/* 경고창 색상 테마 */
+.success-alert { background-color: #ecfdf5; border-color: var(--success-color); color: #065f46; }
+.info-alert { background-color: #eff6ff; border-color: var(--info-color); color: #1e40af; }
+.danger-alert { background-color: #fef2f2; border-color: var(--danger-color); color: #991b1b; }
+
+
+/* 3. 모달 (Modal) 스타일 */
+.modal-overlay {
+    /* 기본 숨김 */
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
+    z-index: 1050;
+    /* 중앙 정렬 */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* JS로 opacity 1로 전환 */
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    /* 모달 등장 애니메이션 */
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.open .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header, .modal-footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+.modal-footer {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: none;
+    justify-content: flex-end;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    color: #9ca3af;
+}
+
+/* 위험 모달 스타일 */
+.modal-content.danger-content .modal-header {
+    background-color: var(--danger-color);
+    color: #fff;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.modal-content.danger-content .modal-icon {
+    margin-right: 10px;
+}
+
+
+/* 4. 토스트 알림 (Toast Notification) 스타일 */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1060;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none; /* 토스트 아래 요소 클릭 가능하도록 */
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    pointer-events: auto; /* 토스트 자체는 클릭 가능하도록 */
+    /* 등장/소멸 애니메이션을 위한 기본 상태 */
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* 토스트 색상 테마 */
+.toast.success { background-color: var(--success-color); color: #fff; }
+.toast.warning { background-color: var(--warning-color); color: var(--text-color); }
+
+/* 미디어 쿼리 (모바일) */
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 90%;
+        margin: 10px;
+    }
+    .toast-container {
+        right: 10px;
+        bottom: 10px;
+    }
+}

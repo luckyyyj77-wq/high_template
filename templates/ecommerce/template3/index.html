@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기본 주문서</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔹 전체 페이지 컨테이너 -->
+<main class="order-container">
+  <h1>주문서 작성</h1>
+  <p class="desc">상품 정보를 확인하고 배송지를 입력해주세요.</p>
+
+  <!-- 🔹 주문 폼 시작 -->
+  <form id="orderForm">
+
+    <!-- ✅ 1. 상품 정보 섹션 -->
+    <section class="section">
+      <h2>상품 정보</h2>
+      <label>상품명</label>
+      <input type="text" id="productName" value="AI 데스크램블러" readonly>
+
+      <label>수량</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </section>
+
+    <!-- ✅ 2. 배송 정보 섹션 -->
+    <section class="section">
+      <h2>배송 정보</h2>
+      <label>수령인 이름</label>
+      <input type="text" id="receiver" placeholder="홍길동" required>
+
+      <label>연락처</label>
+      <input type="tel" id="phone" placeholder="010-1234-5678" required>
+
+      <label>주소</label>
+      <input type="text" id="address" placeholder="서울특별시 강남구 ..." required>
+    </section>
+
+    <!-- ✅ 3. 결제 정보 섹션 -->
+    <section class="section">
+      <h2>결제 방법</h2>
+      <label><input type="radio" name="payment" value="card" checked> 카드결제</label><br>
+      <label><input type="radio" name="payment" value="bank"> 무통장 입금</label><br>
+      <label><input type="radio" name="payment" value="kakao"> 카카오페이</label>
+    </section>
+
+    <!-- ✅ 4. 약관 동의 -->
+    <section class="section">
+      <label><input type="checkbox" id="agree" required> 주문 내용과 결제 정보를 확인했습니다.</label>
+    </section>
+
+    <!-- ✅ 5. 제출 버튼 -->
+    <button type="submit" class="btn">주문하기</button>
+  </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

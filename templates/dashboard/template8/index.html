@@ -1,0 +1,49 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>프로필 관리</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>프로필 관리</h1>
+</header>
+
+<main class="profile-container">
+  <!-- 🔹 프로필 사진 -->
+  <section class="profile-photo">
+    <img id="profileImage" src="https://via.placeholder.com/120" alt="프로필" />
+    <label class="upload-btn">
+      사진 변경
+      <input type="file" id="imageUpload" accept="image/*" hidden>
+    </label>
+  </section>
+
+  <!-- 🔹 프로필 정보 폼 -->
+  <form id="profileForm">
+    <label for="name">이름</label>
+    <input type="text" id="name" placeholder="홍길동" required>
+
+    <label for="email">이메일</label>
+    <input type="email" id="email" placeholder="you@example.com" required>
+
+    <label for="role">직책</label>
+    <input type="text" id="role" placeholder="예: 팀 리더">
+
+    <label for="bio">자기소개</label>
+    <textarea id="bio" rows="4" placeholder="간단한 소개를 입력하세요."></textarea>
+
+    <button type="submit" class="save-btn">변경사항 저장</button>
+  </form>
+
+  <!-- 🔹 저장 결과 -->
+  <div id="resultBox" class="result-box hidden">
+    <p id="resultText"></p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

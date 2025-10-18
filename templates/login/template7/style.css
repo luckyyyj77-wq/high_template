@@ -1,0 +1,30 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+  width: 320px;
+}
+h2 { margin: 0 0 10px; text-align: center; }
+p { color: #666; font-size: 14px; text-align: center; margin-bottom: 25px; }
+label { font-size: 14px; display: block; margin-bottom: 5px; color:#333; }
+input {
+  width: 100%; padding: 10px; border: 1px solid #ccc;
+  border-radius: 8px; margin-bottom: 15px;
+}
+button {
+  width: 100%; padding: 10px; background: #0078ff;
+  color: #fff; border: none; border-radius: 8px; cursor: pointer;
+}
+button:hover { background: #0066e0; }
+.bottom { text-align: center; margin-top: 10px; font-size: 13px; }
+a { color: #0078ff; text-decoration: none; }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Components 01 - Alerts and Modals</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="comp-header">
+        <h1>UI 컴포넌트: 알림 및 모달</h1>
+        <p>재사용 가능한 경고창, 모달 팝업, 토스트 메시지 모음입니다.</p>
+    </header>
+
+    <main class="comp-main-container">
+        <section class="comp-section">
+            <h2>1. 경고창 (Alerts)</h2>
+            
+            <div class="alert success-alert" role="alert">
+                <i class="fas fa-check-circle"></i>
+                <div class="alert-content">
+                    <strong>성공!</strong> 데이터가 성공적으로 저장되었습니다.
+                </div>
+                <button type="button" class="close-btn" data-dismiss="alert">&times;</button>
+            </div>
+            
+            <div class="alert info-alert" role="alert">
+                <i class="fas fa-info-circle"></i>
+                <div class="alert-content">
+                    <strong>알림:</strong> 새로운 기능이 추가되었습니다. 지금 확인해보세요.
+                </div>
+            </div>
+
+            <div class="alert danger-alert" role="alert">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="alert-content">
+                    <strong>오류 발생!</strong> 요청을 처리할 수 없습니다. 시스템 관리자에게 문의하세요.
+                </div>
+            </div>
+        </section>
+        
+        <section class="comp-section">
+            <h2>2. 모달 팝업 (Modals)</h2>
+            <p>모달을 열기 위한 버튼들입니다.</p>
+            <button id="openDefaultModal" class="btn primary-btn">기본 모달 열기</button>
+            <button id="openConfirmModal" class="btn danger-btn">확인 모달 열기</button>
+        </section>
+
+        <section class="comp-section">
+            <h2>3. 토스트 알림 (Toast Notifications)</h2>
+            <p>화면 우측 하단에 잠깐 나타났다가 사라집니다.</p>
+            <button id="showToastSuccess" class="btn success-btn">성공 토스트 표시</button>
+            <button id="showToastWarning" class="btn warning-btn">경고 토스트 표시</button>
+            
+            <div id="toastContainer" class="toast-container">
+                </div>
+        </section>
+    </main>
+    
+    <div id="defaultModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>기본 모달 제목</h3>
+                <button type="button" class="close-modal-btn" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>이것은 일반적인 모달 팝업입니다. 배경을 클릭하거나 닫기 버튼을 눌러 닫을 수 있습니다.</p>
+                <div class="input-group">
+                    <label>입력 예시</label>
+                    <input type="text" placeholder="여기에 입력하세요">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn secondary-btn" data-dismiss="modal">취소</button>
+                <button type="button" class="btn primary-btn">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-content small danger-content">
+            <div class="modal-header">
+                <i class="fas fa-trash-alt modal-icon"></i>
+                <h3>삭제 확인</h3>
+                <button type="button" class="close-modal-btn" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>경고:</strong> 이 항목을 영구적으로 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn secondary-btn" data-dismiss="modal">유지</button>
+                <button type="button" class="btn danger-btn confirm-action-btn">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

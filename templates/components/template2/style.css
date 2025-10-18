@@ -1,0 +1,215 @@
+/* Components 02 - Navigation and Tabs Styles */
+
+/* 1. 글로벌 및 변수 설정 */
+:root {
+    --primary-color: #f59e0b;       /* Amber */
+    --text-color: #1f2937;
+    --light-gray: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+body {
+    /* ... (기본 스타일 유지) ... */
+}
+
+/* 2. 네비게이션 바 (Navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--text-color); /* Dark Background */
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-left: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* 드롭다운 컴포넌트 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle i {
+    font-size: 0.8rem;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.dropdown-menu {
+    display: none; /* JS로 토글됨 */
+    position: absolute;
+    top: 100%;
+    right: 0; /* 우측 정렬 */
+    background: #fff;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.dropdown-item:hover {
+    background: var(--light-gray);
+    color: var(--primary-color);
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 4px 0;
+}
+
+.mobile-toggle-btn {
+    display: none; /* 데스크톱에서는 숨김 */
+}
+
+/* 3. 탭 컴포넌트 (Tabs) */
+.tabs-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tab-list {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-content-wrapper {
+    min-height: 150px;
+}
+
+.tab-pane {
+    display: none; /* 기본 숨김 */
+    animation: fadeIn 0.4s;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 4. 미디어 쿼리 (모바일 네비게이션) */
+@media (max-width: 768px) {
+    .navbar-nav {
+        /* 모바일에서는 기본 숨김 */
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--text-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar-nav.mobile-open {
+        display: flex;
+    }
+
+    .navbar-nav li {
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: none;
+    }
+    
+    .dropdown-menu {
+        position: static; /* 모바일 메뉴 내에서 전체 너비 사용 */
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    
+    .dropdown-item {
+        padding-left: 3rem; /* 들여쓰기 */
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-toggle-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .tab-list {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .tab-button {
+        flex-shrink: 0; /* 버튼이 줄어들지 않도록 */
+    }
+}

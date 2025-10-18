@@ -1,0 +1,89 @@
+/* ===========================================
+   ⚡ Neon Flow 스타일
+   - 그라디언트 라인 애니메이션 + 글래스 카드
+   =========================================== */
+
+body{
+  margin:0; height:100vh; overflow:hidden;
+  font-family:"Noto Sans KR",sans-serif;
+  display:flex; justify-content:center; align-items:center;
+  background:#0b0f1c; color:#fff;
+}
+
+/* 🔹 네온 흐름 배경 */
+.neon-bg{
+  position:fixed; inset:0;
+  background:linear-gradient(270deg,#7c3aed,#22d3ee,#10b981,#f472b6);
+  background-size:600% 600%;
+  filter:blur(100px) brightness(1.1);
+  animation:flow 20s ease infinite;
+  z-index:-1;
+}
+@keyframes flow{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* 🔹 중앙 글래스 카드 */
+.glass-card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:40px 60px;
+  text-align:center;
+  box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+.glass-card h1{
+  margin:0 0 10px;
+  font-size:42px;
+  text-shadow:0 0 10px rgba(255,255,255,0.2);
+}
+.glass-card p{
+  margin-bottom:30px;
+  font-size:15px;
+  color:rgba(255,255,255,0.8);
+}
+
+/* 🔹 버튼 */
+button{
+  position:relative;
+  border:none;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:700;
+  color:#fff;
+  cursor:pointer;
+  background:linear-gradient(90deg,#7c3aed,#22d3ee,#10b981);
+  background-size:200% 100%;
+  box-shadow:0 0 12px rgba(124,58,237,0.5);
+  transition:0.3s;
+  overflow:hidden;
+}
+button:hover{
+  background-position:100% 0;
+  box-shadow:0 0 20px rgba(34,211,238,0.7);
+}
+/* 기존 button 스타일 유지하고 아래 부분 추가 */
+button::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width:10px; height:10px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+  transform:translate(-50%, -50%) scale(0);
+  opacity:0;
+  pointer-events:none;
+}
+
+button.active::after{
+  animation: ripple 0.6s ease-out forwards;
+}
+
+@keyframes ripple{
+  0%{ transform:translate(-50%,-50%) scale(0); opacity:0.8; }
+  80%{ opacity:0.4; }
+  100%{ transform:translate(-50%,-50%) scale(8); opacity:0; }
+}

@@ -1,0 +1,10 @@
+
+:root{--primary:#2563eb;--maxw:1200px}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#f8fafc;color:#111}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.head{text-align:center;padding:60px 0 20px}
+.card{max-width:520px;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;box-shadow:0 10px 24px rgba(37,99,235,.12);display:grid;gap:10px}
+.card input{padding:12px 14px;border:1px solid #d1d5db;border-radius:10px}
+.card button{padding:12px 16px;background:var(--primary);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer}
+.hint{opacity:.6;font-size:.9rem}
+.foot{padding:24px 0;border-top:1px solid #eee;margin-top:40px;text-align:center}

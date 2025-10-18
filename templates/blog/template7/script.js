@@ -1,0 +1,1 @@
+// Template 7: No JS required.

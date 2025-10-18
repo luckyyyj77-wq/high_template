@@ -1,0 +1,10 @@
+
+:root{--accent:#6366f1;--maxw:1200px}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#fff;color:#111}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.head{padding:40px 0 10px}.sub{opacity:.7}
+.timeline{border-left:3px solid #e5e7eb;margin:20px 0;padding-left:16px}
+.item{position:relative;margin-bottom:14px}.item .dot{position:absolute;left:-10px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+.skills{margin:20px 0}.bar{background:#f3f4f6;border-radius:10px;margin-bottom:10px}
+.bar span{display:block;background:var(--accent);color:#fff;padding:8px 10px;border-radius:10px;font-weight:700}
+.foot{padding:20px 0;border-top:1px solid #eee;margin-top:20px;text-align:center}

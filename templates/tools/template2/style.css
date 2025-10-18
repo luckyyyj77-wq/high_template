@@ -1,0 +1,105 @@
+/* ==============================================
+   ⏱️ 타이머 & 스톱워치 스타일
+   - 원형 SVG / 색상 전환
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f8fafc;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.timer-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  text-align: center;
+  width: 320px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+/* 모드 전환 */
+.mode-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.mode-switch button {
+  flex: 1;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #e5e7eb;
+  color: #374151;
+}
+.mode-switch button.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* 원형 타이머 */
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+svg {
+  transform: rotate(-90deg);
+}
+.time-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* 입력 필드 */
+.time-input {
+  display: none;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.time-input input {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 버튼 */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.controls button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #1d4ed8;
+}

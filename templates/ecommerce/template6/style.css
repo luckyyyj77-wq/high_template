@@ -1,0 +1,97 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* ===============================
+   🎟️ 쿠폰 적용 페이지 스타일
+   - 심플 카드형
+   - 버튼과 입력창 나란히 배치
+================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.coupon-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 30px;
+  width: 360px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.sub {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+.apply-btn {
+  padding: 10px 14px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+.apply-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 결과 박스 */
+.result-box {
+  margin-top: 24px;
+  padding: 18px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+.result-box h2 {
+  margin: 0 0 10px;
+  color: #2563eb;
+  font-size: 16px;
+}
+.result-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.hidden {
+  display: none;
+}

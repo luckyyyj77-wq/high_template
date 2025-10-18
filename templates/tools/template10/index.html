@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>텍스트 분석기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="analyzer-container">
+  <h1>🔍 텍스트 분석기</h1>
+
+  <!-- 🔹 입력 -->
+  <textarea id="textInput" placeholder="여기에 텍스트를 입력하세요..."></textarea>
+
+  <!-- 🔹 결과 -->
+  <div class="results">
+    <p>글자 수: <span id="charCount">0</span></p>
+    <p>단어 수: <span id="wordCount">0</span></p>
+    <p>문장 수: <span id="sentenceCount">0</span></p>
+    <p>공백 수: <span id="spaceCount">0</span></p>
+    <p>평균 단어 길이: <span id="avgLength">0</span></p>
+  </div>
+
+  <!-- 🔹 버튼 -->
+  <div class="btns">
+    <button id="copyBtn">복사</button>
+    <button id="clearBtn">초기화</button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

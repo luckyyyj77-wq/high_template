@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>결제 모달</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔹 결제 버튼 -->
+<button id="openCheckout" class="pay-btn">결제하기</button>
+
+<!-- 🔹 결제 모달 -->
+<div id="checkoutModal" class="modal hidden">
+  <div class="overlay"></div>
+
+  <div class="modal-box">
+    <h2>카드 결제</h2>
+    <p class="sub">카드 정보를 입력해주세요</p>
+
+    <form id="checkoutForm">
+      <!-- 카드번호 -->
+      <label>카드번호</label>
+      <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+
+      <!-- 유효기간 -->
+      <label>유효기간 (MM/YY)</label>
+      <input type="text" id="expiry" maxlength="5" placeholder="12/30" required>
+
+      <!-- CVC -->
+      <label>CVC</label>
+      <input type="text" id="cvc" maxlength="3" placeholder="123" required>
+
+      <!-- 이름 -->
+      <label>소유자 이름</label>
+      <input type="text" id="owner" placeholder="HONG GILDONG" required>
+
+      <!-- 버튼 -->
+      <button type="submit" class="submit-btn">결제하기</button>
+    </form>
+
+    <!-- 닫기 버튼 -->
+    <button id="closeCheckout" class="close-btn">×</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

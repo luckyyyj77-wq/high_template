@@ -1,0 +1,76 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* ============================================
+   📈 통계 대시보드 스타일
+   - 상단 필터 + 카드 + 차트
+============================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.topbar {
+  background: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+}
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filters select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.analytics {
+  padding: 28px;
+}
+
+/* 카드 요약 */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card h2 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+.card .value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* 차트 영역 */
+.chart-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.chart-section h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+canvas {
+  width: 100%;
+  max-width: 600px;
+}

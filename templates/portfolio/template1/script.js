@@ -1,0 +1,1 @@
+// Template 1: No special JS required.

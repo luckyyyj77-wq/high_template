@@ -1,0 +1,93 @@
+/* =============================================
+   🔐 비밀번호 생성기 스타일 (다크톤)
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #1e293b;
+  color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pwgen-container {
+  background: #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+  padding: 30px 40px;
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #60a5fa;
+}
+
+/* 결과창 */
+.result-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.result-box input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #f9fafb;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
+.result-box button {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.result-box button:hover {
+  background: #1d4ed8;
+}
+
+/* 옵션 */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.options input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+.options label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e2e8f0;
+}
+
+/* 생성 버튼 */
+#generateBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+#generateBtn:hover {
+  background: #1d4ed8;
+}

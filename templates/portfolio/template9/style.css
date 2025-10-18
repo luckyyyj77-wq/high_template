@@ -1,0 +1,11 @@
+
+:root{--maxw:1200px}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#fff;color:#111}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.head{padding:40px 0 10px}.sub{opacity:.7}
+.body{padding:10px 0}
+.block{background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;padding:16px;margin-bottom:12px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.ba img{border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.foot{padding:20px 0;border-top:1px solid #eee;margin-top:20px;text-align:center}
+@media(max-width:900px){.ba{grid-template-columns:1fr}}

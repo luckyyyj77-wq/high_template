@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Template 7: Product Compare — 비교 테이블형 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Template 7 · Product Compare</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container head">
+    <h1>요금제 비교</h1>
+    <div class="switch">
+      <label><input id="bill" type="checkbox" /> <span>연간 결제</span></label>
+    </div>
+  </header>
+
+  <main class="container table-wrap">
+    <table class="pricing">
+      <thead><tr><th>플랜</th><th>기능</th><th class="price">가격</th></tr></thead>
+      <tbody>
+        <tr><td>Basic</td><td>핵심 기능</td><td class="price" data-m="9" data-y="90">$9</td></tr>
+        <tr><td>Pro</td><td>모든 기능</td><td class="price" data-m="19" data-y="190">$19</td></tr>
+        <tr><td>Team</td><td>협업 기능</td><td class="price" data-m="49" data-y="490">$49</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="container foot">© 2025 High Templater</footer>
+  <script src="script.js"></script>
+</body>
+</html>

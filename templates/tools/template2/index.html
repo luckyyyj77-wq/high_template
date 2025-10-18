@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>타이머 & 스톱워치</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="timer-container">
+  <h1>타이머 & 스톱워치</h1>
+
+  <!-- 🔹 모드 전환 -->
+  <div class="mode-switch">
+    <button id="stopwatchMode" class="active">스톱워치</button>
+    <button id="timerMode">타이머</button>
+  </div>
+
+  <!-- 🔹 원형 SVG 표시 -->
+  <div class="circle">
+    <svg width="200" height="200">
+      <circle cx="100" cy="100" r="90" stroke="#e5e7eb" stroke-width="10" fill="none"/>
+      <circle id="progressCircle" cx="100" cy="100" r="90" stroke="#2563eb" stroke-width="10" fill="none"
+              stroke-dasharray="565" stroke-dashoffset="565" stroke-linecap="round"/>
+    </svg>
+    <div class="time-display" id="timeDisplay">00:00</div>
+  </div>
+
+  <!-- 🔹 입력 필드 (타이머 모드 전용) -->
+  <div class="time-input" id="timeInput">
+    <input type="number" id="minutes" placeholder="분" min="0" max="59">
+    <input type="number" id="seconds" placeholder="초" min="0" max="59">
+  </div>
+
+  <!-- 🔹 버튼 -->
+  <div class="controls">
+    <button id="startBtn">시작</button>
+    <button id="pauseBtn">일시정지</button>
+    <button id="resetBtn">리셋</button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

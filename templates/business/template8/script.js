@@ -1,0 +1,1 @@
+// Template 8: No special JS.

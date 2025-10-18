@@ -1,0 +1,1 @@
+// Template 3: Hover-only showcase; JS optional.

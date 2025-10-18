@@ -1,0 +1,188 @@
+/* Components 03 - Buttons and Inputs Styles */
+
+/* 1. 글로벌 및 변수 설정 */
+:root {
+    --primary-color: #f97316;       /* Orange */
+    --secondary-color: #6b7280;     /* Gray */
+    --success-color: #10b981;       /* Green */
+    --danger-color: #ef4444;        /* Red */
+    --warning-color: #f59e0b;       /* Amber */
+    --text-color: #1f2937;
+    --input-border: #d1d5db;
+}
+
+body {
+    /* ... (기본 스타일 유지) ... */
+}
+
+/* 2. 버튼 스타일 (Buttons) */
+.component-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+/* 기본 색상 버튼 */
+.primary-btn { background-color: var(--primary-color); color: #fff; }
+.secondary-btn { background-color: var(--secondary-color); color: #fff; }
+.success-btn { background-color: var(--success-color); color: #fff; }
+.danger-btn { background-color: var(--danger-color); color: #fff; }
+.warning-btn { background-color: var(--warning-color); color: #fff; }
+
+.primary-btn:hover { background-color: #e5600c; }
+
+/* 크기 버튼 */
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.9rem; }
+.btn-lg { padding: 1rem 2rem; font-size: 1.1rem; }
+
+/* 비활성화 상태 */
+.btn:disabled, .btn:disabled:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* 외곽선 (Outline) 버튼 */
+.outline-btn {
+    background: #fff;
+    border: 2px solid;
+    color: var(--text-color);
+}
+.primary-outline { border-color: var(--primary-color); color: var(--primary-color); }
+.success-outline { border-color: var(--success-color); color: var(--success-color); }
+.danger-outline { border-color: var(--danger-color); color: var(--danger-color); }
+
+.primary-outline:hover { background-color: var(--primary-color); color: #fff; }
+
+/* 로딩 버튼 (JS에서 클래스 토글) */
+.loading-btn {
+    position: relative;
+    padding-left: 3rem; /* 아이콘 공간 확보 */
+}
+
+.loading-btn.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.loading-btn.loading i.fa-save {
+    display: none;
+}
+
+.loading-btn::before {
+    content: attr(data-loading-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: #fff;
+}
+
+.loading-btn.loading::before {
+    display: block;
+}
+
+
+/* 3. 입력 필드 스타일 (Inputs) */
+form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input[type="text"], 
+.input-group input[type="email"], 
+.input-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.help-text {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-top: 5px;
+    display: block;
+}
+
+/* 유효성 검사 피드백 */
+.input-group.invalid input {
+    border-color: var(--danger-color);
+}
+.input-group.valid input {
+    border-color: var(--success-color);
+}
+
+.feedback-icon {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.valid-icon, .invalid-icon {
+    display: none;
+}
+
+.input-group.valid .valid-icon {
+    display: block;
+    color: var(--success-color);
+}
+.input-group.invalid .invalid-icon {
+    display: block;
+    color: var(--danger-color);
+}
+
+.feedback-message {
+    display: none;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.input-group.invalid .invalid-msg { display: block; color: var(--danger-color); }
+.input-group.valid .valid-msg { display: block; color: var(--success-color); }
+
+/* 체크박스 스타일링 */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}

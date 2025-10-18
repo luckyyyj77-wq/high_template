@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #e2e8f0;
+}
+
+.open-btn {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.open-btn:hover {
+  background: #0ea5e9;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-box {
+  position: relative;
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 36px 32px;
+  width: 360px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: pop .3s ease;
+}
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h2 {
+  text-align: center;
+  color: #38bdf8;
+  margin: 0 0 8px;
+}
+.sub {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #cbd5e1;
+  margin: 10px 0 4px;
+}
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 16px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+.link {
+  color: #38bdf8;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover { background: #0ea5e9; }
+
+.bottom {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+.bottom a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 20px;
+  cursor: pointer;
+}
+.close-btn:hover { color: #38bdf8; }

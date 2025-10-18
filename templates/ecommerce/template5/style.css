@@ -1,0 +1,93 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* ==============================
+   🚚 배송 조회 페이지 스타일
+   - 깔끔한 화이트카드 구조
+   - 모바일 대응
+============================== */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.track-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 30px;
+  width: 340px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.1);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.sub {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* 🔹 결과 박스 */
+.result-box {
+  margin-top: 24px;
+  padding: 18px 16px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+.result-box h2 {
+  margin: 0 0 10px;
+  color: #2563eb;
+  font-size: 16px;
+}
+.result-box p {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* 숨김 클래스 */
+.hidden {
+  display: none;
+}

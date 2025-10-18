@@ -1,0 +1,38 @@
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Login 06 - Compact Outline Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="login-container compact-center">
+        <h2 class="title">Secure Access (안전한 접속)</h2>
+        
+        <form id="loginForm6">
+            <div class="input-group outline-label">
+                <input type="email" id="email6" required placeholder=" " onfocus="this.parentNode.classList.add('focused')" onblur="if(!this.value) this.parentNode.classList.remove('focused')">
+                <label for="email6">이메일 주소</label>
+            </div>
+            
+            <div class="input-group outline-label">
+                <input type="password" id="password6" required placeholder=" " onfocus="this.parentNode.classList.add('focused')" onblur="if(!this.value) this.parentNode.classList.remove('focused')">
+                <label for="password6">비밀번호</label>
+            </div>
+
+            <div class="options">
+                <a href="#" class="forgot-password">비밀번호 재설정</a>
+            </div>
+
+            <button type="submit" class="outline-button">Submit (접속)</button>
+        </form>
+
+        <div class="signup-link">
+            Need an account? <a href="#">Sign Up Here</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

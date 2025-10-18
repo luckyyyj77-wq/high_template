@@ -1,0 +1,127 @@
+/* Dashboard 03 - Full-Width Data Table Styles */
+
+/* 1. 기본 변수 */
+:root {
+    --primary-color: #f97316;       /* Orange Accent */
+    --text-color: #1f2937;
+    --bg-color: #f7f9fc;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+body {
+    /* ... (기본 스타일 유지) ... */
+}
+
+/* 2. 풀-위드스 레이아웃 (사이드바 닫힘 가정) */
+.main-content.full-width {
+    margin-left: 0; /* 사이드바 공간을 차지하지 않음 */
+}
+
+/* 3. 테이블 컨트롤 및 필터 */
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filters label {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.filters select, .filters input[type="date"] {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.export-btn {
+    padding: 0.75rem 1.25rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* 4. 데이터 테이블 스타일 */
+.data-table-wrapper {
+    overflow-x: auto; /* 모바일에서 가로 스크롤 허용 */
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px; /* 테이블 최소 너비 설정 */
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 정렬 아이콘 */
+.data-table th.sortable i {
+    margin-left: 5px;
+    color: #9ca3af;
+}
+
+.data-table th.active i {
+    color: var(--primary-color);
+}
+
+/* 상태 칩 (Status Chip) */
+.status-chip {
+    padding: 0.3rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.status-chip.completed { background-color: #d1fae5; color: #059669; }
+.status-chip.pending { background-color: #fef3c7; color: #d97706; }
+.status-chip.cancelled { background-color: #fee2e2; color: #ef4444; }
+
+/* 액션 버튼 */
+.detail-btn {
+    padding: 0.5rem 0.75rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination-info {
+    padding: 1rem 0;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* 5. 미디어 쿼리 */
+@media (max-width: 600px) {
+    .table-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filters {
+        margin-bottom: 1rem;
+    }
+}

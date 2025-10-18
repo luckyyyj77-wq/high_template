@@ -1,0 +1,1 @@
+// Template 6: Add print-to-PDF or download actions if desired.

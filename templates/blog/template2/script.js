@@ -1,0 +1,1 @@
+// Template 2: Optional infinite scroll can be added later.

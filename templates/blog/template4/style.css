@@ -1,0 +1,8 @@
+
+:root{--maxw:1200px}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#0b1020;color:#e5e7eb}
+.hero{height:50vh;background:url('https://picsum.photos/seed/hero/1600/900') center/cover;position:relative}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);display:grid;place-items:center;text-align:center;padding:20px}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.article{padding:24px 0}
+.foot{padding:24px 0;border-top:1px solid #1f2937;margin-top:20px;text-align:center}

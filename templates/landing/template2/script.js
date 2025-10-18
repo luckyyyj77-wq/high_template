@@ -1,0 +1,1 @@
+// Template 2 has no special JS; add your interactions here if needed.

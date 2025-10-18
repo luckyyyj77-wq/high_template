@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>E-commerce 01 - Product Grid with Filter (제품 목록 및 필터)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">HighShop</div>
+        <nav>
+            <a href="#">New Arrivals</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Sale</a>
+        </nav>
+        <div class="user-actions">
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> (3)</button>
+        </div>
+    </header>
+
+    <main class="product-main-container">
+        <button class="filter-toggle-btn"><i class="fas fa-filter"></i> 필터 열기</button>
+        
+        <aside id="sidebarFilter" class="sidebar-filter">
+            <h3>필터 (Filter)</h3>
+
+            <div class="filter-group">
+                <h4>카테고리</h4>
+                <ul>
+                    <li><label><input type="checkbox" name="category" value="tops"> 상의 (Tops)</label></li>
+                    <li><label><input type="checkbox" name="category" value="bottoms"> 하의 (Bottoms)</label></li>
+                    <li><label><input type="checkbox" name="category" value="shoes"> 신발 (Shoes)</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h4>가격 범위</h4>
+                <input type="range" min="0" max="500000" step="10000" value="300000" id="priceRange">
+                <p>최대: <span id="priceValue">300,000원</span></p>
+            </div>
+            
+            <div class="filter-group color-filter">
+                <h4>색상</h4>
+                <div class="color-options">
+                    <span class="color-chip red" data-color="red"></span>
+                    <span class="color-chip blue" data-color="blue"></span>
+                    <span class="color-chip black" data-color="black"></span>
+                </div>
+            </div>
+
+            <button class="apply-filter-btn">필터 적용</button>
+        </aside>
+
+        <section class="product-grid-area">
+            <div class="grid-header">
+                <p>총 <span>150</span>개 제품 (Showing 150 items)</p>
+                <div class="sort-options">
+                    <label for="sort">정렬:</label>
+                    <select id="sort">
+                        <option value="latest">최신순</option>
+                        <option value="price-low">낮은 가격순</option>
+                        <option value="price-high">높은 가격순</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/300/400?random=1" alt="제품 이미지 1">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">프리미엄 코튼 티셔츠</h4>
+                        <p class="product-category">상의</p>
+                        <div class="product-price">
+                            <span class="current-price">39,000원</span>
+                            <span class="original-price">55,000원</span>
+                        </div>
+                        <button class="quick-add-btn">빠르게 담기</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/300/400?random=2" alt="제품 이미지 2">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">슬림핏 데님 진</h4>
+                        <p class="product-category">하의</p>
+                        <div class="product-price">
+                            <span class="current-price">79,000원</span>
+                        </div>
+                        <button class="quick-add-btn">빠르게 담기</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">...</div>
+                <div class="product-card">...</div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link disabled">이전</a>
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">다음</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="style.css"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "meta_title": "High Templater",
+  "site_title": "High Templater",
+  "site_subtitle": "Un centro de plantillas web para empezar con solo copiar.",
+  "footer": "© 2025 High Templater. Todas las plantillas tienen licencia MIT.",
+
+  "cat_landing": "Página de aterrizaje",
+  "cat_portfolio": "Portafolio",
+  "cat_blog": "Blog / Revista",
+  "cat_business": "Negocio / Empresa",
+  "cat_login": "Inicio de sesión / Formulario",
+  "cat_ecommerce": "Comercio electrónico",
+  "cat_dashboard": "Panel / Admin",
+  "cat_components": "Componentes / Kit UI",
+  "cat_tools": "Herramientas utilitarias",
+  "cat_creative": "Creativo / Experimental"
+}

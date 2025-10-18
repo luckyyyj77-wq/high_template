@@ -1,0 +1,77 @@
+/* ============================================
+   ⚖️ 단위 변환기 스타일
+   - 라이트톤 / 버튼 강조
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #111827;
+}
+
+.converter-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  width: 340px;
+  text-align: center;
+}
+
+h1 {
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+/* 카테고리 버튼 */
+.category {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.category button {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  background: #e5e7eb;
+  cursor: pointer;
+  font-weight: 600;
+}
+.category button.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* 변환기 */
+.converter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.converter input,
+.converter select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+.converter span {
+  font-weight: 700;
+  color: #2563eb;
+  margin: 4px 0;
+}
+#formula {
+  font-size: 13px;
+  color: #374151;
+  margin-top: 10px;
+}

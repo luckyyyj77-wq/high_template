@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>정렬 가능한 표 컴포넌트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>정렬 가능한 표</h1>
+
+<table id="userTable" class="sortable">
+  <thead>
+    <tr>
+      <th data-type="string">이름</th>
+      <th data-type="number">나이</th>
+      <th data-type="string">도시</th>
+      <th data-type="number">점수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>김민수</td><td>29</td><td>서울</td><td>87</td></tr>
+    <tr><td>박지현</td><td>24</td><td>부산</td><td>92</td></tr>
+    <tr><td>이수정</td><td>31</td><td>대구</td><td>75</td></tr>
+    <tr><td>정우성</td><td>27</td><td>인천</td><td>95</td></tr>
+    <tr><td>한소희</td><td>22</td><td>서울</td><td>88</td></tr>
+  </tbody>
+</table>
+
+<p class="hint">헤더를 클릭하면 정렬됩니다 🔽</p>
+
+<script src="script.js"></script>
+</body>
+</html>

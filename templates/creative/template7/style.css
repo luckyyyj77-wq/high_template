@@ -1,0 +1,52 @@
+/* ============================================
+   🌈 Gradient Wave 배경
+   - CSS만으로 구현한 흐르는 물결
+================================================ */
+
+html,body{
+  margin:0;
+  height:100%;
+  overflow:hidden;
+  font-family:"Noto Sans KR",sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0b0f1c;
+  color:#fff;
+}
+
+/* 배경 */
+.gradient-bg{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(124,58,237,0.6), transparent 70%),
+    radial-gradient(circle at 70% 60%, rgba(34,211,238,0.5), transparent 70%),
+    linear-gradient(135deg,#7c3aed,#22d3ee,#10b981);
+  background-size:200% 200%;
+  animation:flow 12s ease-in-out infinite alternate;
+  filter:blur(80px) brightness(1.1);
+  z-index:-1;
+}
+
+@keyframes flow{
+  0%{background-position:0% 0%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:50% 100%;}
+}
+
+/* 내용 */
+.content{
+  text-align:center;
+  z-index:1;
+}
+.content h1{
+  font-size:60px;
+  margin:0;
+  color:#fff;
+  text-shadow:0 0 30px rgba(124,58,237,0.6);
+}
+.content p{
+  color:rgba(255,255,255,0.8);
+  font-size:16px;
+}

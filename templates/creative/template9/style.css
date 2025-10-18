@@ -1,0 +1,39 @@
+html,body{
+  margin:0;
+  height:100%;
+  overflow:hidden;
+  background:#0b0f1c;
+  font-family:"Noto Sans KR",sans-serif;
+  color:#fff;
+}
+
+canvas{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
+.content{
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+}
+
+h1{
+  font-size:48px;
+  margin:0 0 10px;
+  color:#22d3ee;
+}
+
+p{color:rgba(255,255,255,0.8);}
+button{
+  margin-top:20px;
+  padding:12px 24px;
+  font-size:16px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(90deg,#22d3ee,#7c3aed);
+  color:#fff;
+  cursor:pointer;
+}

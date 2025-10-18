@@ -1,0 +1,1 @@
+// Template 9: <details> native; you can add analytics here if needed.

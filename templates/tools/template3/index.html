@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>색상 추출기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="color-container">
+  <h1>🎨 색상 추출기</h1>
+
+  <!-- 🔹 색상 선택 -->
+  <input type="color" id="colorPicker" value="#2563eb">
+
+  <!-- 🔹 미리보기 -->
+  <div class="preview" id="colorPreview"></div>
+
+  <!-- 🔹 HEX / RGB 값 -->
+  <div class="color-info">
+    <label>HEX</label>
+    <input type="text" id="hexValue" readonly>
+    <button onclick="copyToClipboard('hexValue')">복사</button>
+  </div>
+
+  <div class="color-info">
+    <label>RGB</label>
+    <input type="text" id="rgbValue" readonly>
+    <button onclick="copyToClipboard('rgbValue')">복사</button>
+  </div>
+
+  <!-- 🔹 반대 변환 입력 -->
+  <div class="convert-section">
+    <h3>HEX → RGB 변환기</h3>
+    <input type="text" id="convertHex" placeholder="#ff0000">
+    <button onclick="convertHexToRGB()">변환</button>
+    <p id="convertResult"></p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>비밀번호 생성기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="pwgen-container">
+  <h1>🔐 비밀번호 생성기</h1>
+
+  <!-- 🔹 생성 결과 -->
+  <div class="result-box">
+    <input type="text" id="password" readonly>
+    <button onclick="copyPassword()">복사</button>
+  </div>
+
+  <!-- 🔹 옵션 -->
+  <div class="options">
+    <label>길이: <span id="lengthValue">12</span></label>
+    <input type="range" id="length" min="4" max="32" value="12">
+
+    <label><input type="checkbox" id="includeUpper" checked> 대문자 포함</label>
+    <label><input type="checkbox" id="includeNumbers" checked> 숫자 포함</label>
+    <label><input type="checkbox" id="includeSymbols" checked> 특수문자 포함</label>
+  </div>
+
+  <!-- 🔹 버튼 -->
+  <button id="generateBtn">새로 생성</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

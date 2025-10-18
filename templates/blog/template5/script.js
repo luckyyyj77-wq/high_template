@@ -1,0 +1,1 @@
+// Template 5: Rendered HTML with markdown-like styles.

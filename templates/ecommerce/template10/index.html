@@ -1,0 +1,50 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>회원가입</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="signup-container">
+  <h1>회원가입</h1>
+  <p class="sub">필수 정보를 입력하고 가입을 완료하세요.</p>
+
+  <!-- 🔹 회원가입 폼 -->
+  <form id="signupForm">
+    <!-- 이름 -->
+    <label for="name">이름</label>
+    <input type="text" id="name" placeholder="홍길동" required>
+
+    <!-- 이메일 -->
+    <label for="email">이메일</label>
+    <input type="email" id="email" placeholder="you@example.com" required>
+
+    <!-- 비밀번호 -->
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" placeholder="6자 이상 입력" minlength="6" required>
+
+    <!-- 비밀번호 확인 -->
+    <label for="confirmPassword">비밀번호 확인</label>
+    <input type="password" id="confirmPassword" placeholder="비밀번호를 다시 입력" minlength="6" required>
+
+    <!-- 주소 -->
+    <label for="address">주소</label>
+    <input type="text" id="address" placeholder="서울특별시 ..." required>
+
+    <!-- 이용약관 동의 -->
+    <label class="agree"><input type="checkbox" id="agree" required> 이용약관에 동의합니다.</label>
+
+    <!-- 제출 버튼 -->
+    <button type="submit" class="submit-btn">가입하기</button>
+  </form>
+
+  <!-- 결과 메시지 -->
+  <div id="resultBox" class="result-box hidden">
+    <p id="resultText"></p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

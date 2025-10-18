@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dashboard 05 - Kanban Task Management</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="dashboard-container task-layout">
+        <aside class="sidebar compact">...</aside>
+        
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="page-title">프로젝트 A - 작업 보드</div>
+                <button class="add-task-btn"><i class="fas fa-plus"></i> 새 작업 추가</button>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="kanban-board">
+                    <div class="task-column" data-status="todo">
+                        <h3 class="column-header todo-header">할 일 (To Do) <span class="task-count">2</span></h3>
+                        <div class="task-list" id="todoList">
+                            <div class="task-card" draggable="true" data-priority="high">
+                                <h4>랜딩 페이지 와이어프레임 제작</h4>
+                                <p class="task-meta">마감: 2025-10-25</p>
+                                <span class="priority high">High</span>
+                            </div>
+                            <div class="task-card" draggable="true" data-priority="medium">
+                                <h4>주간 보고서 초안 작성</h4>
+                                <p class="task-meta">담당: 김매니저</p>
+                                <span class="priority medium">Medium</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="task-column" data-status="inprogress">
+                        <h3 class="column-header inprogress-header">진행 중 (In Progress) <span class="task-count">1</span></h3>
+                        <div class="task-list" id="inProgressList">
+                            <div class="task-card" draggable="true" data-priority="high">
+                                <h4>DB 스키마 최적화</h4>
+                                <p class="task-meta">마감: 금일</p>
+                                <span class="priority high">High</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="task-column" data-status="done">
+                        <h3 class="column-header done-header">완료 (Done) <span class="task-count">3</span></h3>
+                        <div class="task-list" id="doneList">
+                            <div class="task-card completed">
+                                <h4>로그인 템플릿 검토 완료</h4>
+                                <p class="task-meta">완료일: 2025-10-17</p>
+                                <span class="priority low">Low</span>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

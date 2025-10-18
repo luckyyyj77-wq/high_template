@@ -1,0 +1,1 @@
+// Template 3: Sidebar toggles can be added for mobile if needed.

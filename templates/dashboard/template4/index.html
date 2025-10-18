@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dashboard 04 - Card-Based Performance</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="dashboard-container compact-layout">
+        <aside class="sidebar compact">...</aside>
+        
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="page-title">성과 분석 (Performance Analytics)</div>
+                <div class="date-selector">
+                    <label for="period">기간:</label>
+                    <select id="period">
+                        <option value="monthly">최근 1개월</option>
+                        <option value="quarterly">최근 3개월</option>
+                        <option value="yearly">최근 1년</option>
+                    </select>
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <p class="label">방문자 수 (Visitors)</p>
+                        <p class="value" data-kpi="visitors">124,500</p>
+                        <span class="trend up">▲ 15%</span>
+                    </div>
+                    <div class="kpi-card">
+                        <p class="label">전환율 (Conversion)</p>
+                        <p class="value" data-kpi="conversion">4.2%</p>
+                        <span class="trend down">▼ 0.5%</span>
+                    </div>
+                    <div class="kpi-card">
+                        <p class="label">이탈률 (Bounce Rate)</p>
+                        <p class="value" data-kpi="bounce">35.1%</p>
+                        <span class="trend down">▼ 2%</span>
+                    </div>
+                </div>
+
+                <div class="chart-section-grid">
+                    <div class="section performance-chart">
+                        <h3>기간별 방문자 추이</h3>
+                        <div class="chart-canvas">
+                            <canvas id="lineChartMock"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="section conversion-chart">
+                        <h3>장치별 전환 기여도</h3>
+                        <div class="chart-canvas small-chart">
+                            <canvas id="doughnutChartMock"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section detail-list-section">
+                    <h3>상세 채널 분석</h3>
+                    <ul id="channelList">
+                        </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

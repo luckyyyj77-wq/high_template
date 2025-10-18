@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>모달 컴포넌트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>모달 컴포넌트 데모</h1>
+<button id="openModal" class="open-btn">모달 열기</button>
+
+<!-- 🔹 모달 구조 -->
+<div id="modal" class="modal hidden">
+  <div class="overlay"></div>
+
+  <div class="modal-box">
+    <h2>확인이 필요합니다</h2>
+    <p>이 작업을 진행하시겠습니까?</p>
+    <div class="modal-actions">
+      <button id="confirmBtn" class="confirm">확인</button>
+      <button id="cancelBtn" class="cancel">취소</button>
+    </div>
+    <button id="closeModal" class="close-btn">×</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

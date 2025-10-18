@@ -1,0 +1,8 @@
+
+:root{--maxw:1200px;--accent:#0ea5e9}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#f8fafc;color:#111}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.head{padding:28px 0}
+.timeline{border-left:3px solid #e5e7eb;margin:10px 0 20px;padding-left:16px}
+.row{position:relative;margin-bottom:14px}
+.row .dot{position:absolute;left:-10px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent)}

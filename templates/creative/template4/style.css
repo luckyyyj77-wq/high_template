@@ -1,0 +1,57 @@
+/* ============================================
+   💡 네온 글로우 텍스트
+   - 빛 반사 + 색상 흐름
+================================================ */
+
+html,body{
+  margin:0;
+  height:100%;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0b0f1c;
+  font-family:"Noto Sans KR",sans-serif;
+  color:#fff;
+}
+
+.glow-container{
+  text-align:center;
+  user-select:none;
+}
+
+h1{
+  font-size:90px;
+  font-weight:900;
+  margin:0;
+  letter-spacing:6px;
+  background:linear-gradient(90deg,#22d3ee,#7c3aed,#f472b6);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 10px rgba(124,58,237,0.8));
+  animation:hue 6s linear infinite;
+  background-size:300% 100%;
+}
+
+@keyframes hue{
+  0%{background-position:0% 50%;}
+  100%{background-position:100% 50%;}
+}
+
+p{
+  margin-top:20px;
+  color:rgba(255,255,255,0.7);
+  font-size:15px;
+}
+
+/* 마우스에 따른 빛 효과 */
+h1::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(255,255,255,0.35), transparent 60%);
+  mix-blend-mode:overlay;
+  transition:background-position 0.1s;
+  pointer-events:none;
+}

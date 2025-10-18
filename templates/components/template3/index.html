@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Components 03 - Buttons and Inputs</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="comp-header">
+        <h1>UI 컴포넌트: 버튼 및 입력</h1>
+    </header>
+
+    <main class="comp-main-container">
+        <section class="comp-section">
+            <h2>1. 버튼 스타일 (Button Styles)</h2>
+            <div class="component-group">
+                <button class="btn primary-btn">Primary</button>
+                <button class="btn secondary-btn">Secondary</button>
+                <button class="btn success-btn">Success</button>
+                <button class="btn danger-btn">Danger</button>
+                <button class="btn warning-btn">Warning</button>
+            </div>
+            
+            <h3>외곽선 (Outline) 버튼</h3>
+            <div class="component-group">
+                <button class="btn outline-btn primary-outline">Primary Outline</button>
+                <button class="btn outline-btn success-outline">Success Outline</button>
+                <button class="btn outline-btn danger-outline">Danger Outline</button>
+            </div>
+            
+            <h3>크기 및 상태</h3>
+            <div class="component-group">
+                <button class="btn primary-btn btn-sm">Small</button>
+                <button class="btn primary-btn btn-lg">Large</button>
+                <button class="btn primary-btn" disabled>Disabled</button>
+                <button class="btn primary-btn loading-btn" data-loading-text="처리 중...">
+                    <i class="fas fa-save"></i> 저장하기
+                </button>
+            </div>
+        </section>
+
+        <section class="comp-section">
+            <h2>2. 입력 필드 (Inputs)</h2>
+            
+            <form id="validationForm">
+                <div class="input-group">
+                    <label for="nameInput">이름</label>
+                    <input type="text" id="nameInput" placeholder="이름을 입력하세요" required>
+                    <small class="help-text">필수 입력 필드입니다.</small>
+                </div>
+
+                <div class="input-group" id="emailGroup">
+                    <label for="emailInput">이메일</label>
+                    <input type="email" id="emailInput" placeholder="example@domain.com" required>
+                    <div class="feedback-icon"><i class="fas fa-check-circle valid-icon"></i><i class="fas fa-exclamation-circle invalid-icon"></i></div>
+                    <small class="feedback-message invalid-msg">유효한 이메일 형식이 아닙니다.</small>
+                    <small class="feedback-message valid-msg">사용 가능한 이메일입니다.</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="messageInput">메시지</label>
+                    <textarea id="messageInput" rows="4" placeholder="메시지를 입력하세요."></textarea>
+                </div>
+                
+                <div class="input-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="agreeCheckbox">
+                        <span>개인정보 수집에 동의합니다.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn primary-btn">폼 제출</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

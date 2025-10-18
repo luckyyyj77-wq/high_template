@@ -1,0 +1,12 @@
+
+:root{--grad:linear-gradient(120deg,#6366f1,#a855f7);--maxw:1200px}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#fff;color:#111}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.head{display:flex;align-items:center;justify-content:space-between;padding:40px 0}
+.switch{background:#f3f4f6;border-radius:999px;padding:8px 12px}
+.table-wrap{padding-bottom:40px}
+.pricing{width:100%;border-collapse:separate;border-spacing:0 10px}
+.pricing th,.pricing td{padding:14px 16px;background:#fff;border:1px solid #eee}
+.pricing thead th{background:#f8fafc}
+.pricing td.price{font-weight:800;color:#111;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot{padding:24px 0;border-top:1px solid #eee;margin-top:20px;text-align:center}

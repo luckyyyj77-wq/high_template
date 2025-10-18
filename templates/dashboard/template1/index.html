@@ -1,0 +1,112 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dashboard 01 - Fixed Sidebar Layout</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-text">HighDash</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="#"><i class="fas fa-home"></i> 대시보드 홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fas fa-chart-line"></i> 분석 및 통계</a>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="submenu-toggle"><i class="fas fa-box-open"></i> 제품 관리 <i class="fas fa-chevron-right arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">제품 목록</a></li>
+                            <li><a href="#">재고 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fas fa-users"></i> 고객 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="top-bar">
+                <button id="sidebarToggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+                <div class="page-title">대시보드 개요 (Dashboard Overview)</div>
+                <div class="user-profile">
+                    <span class="username">관리자님</span>
+                    <img src="https://picsum.photos/40" alt="프로필 사진" class="profile-img">
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-won-sign icon primary"></i>
+                        <p class="label">총 매출 (Revenue)</p>
+                        <p class="value">2,500,000,000원</p>
+                        <span class="change positive"><i class="fas fa-arrow-up"></i> 12.5%</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <i class="fas fa-user-plus icon success"></i>
+                        <p class="label">신규 사용자 (New Users)</p>
+                        <p class="value">1,452 명</p>
+                        <span class="change negative"><i class="fas fa-arrow-down"></i> 2.1%</span>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-receipt icon warning"></i>
+                        <p class="label">평균 주문액 (AOV)</p>
+                        <p class="value">45,500원</p>
+                        <span class="change positive"><i class="fas fa-arrow-up"></i> 5.0%</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <i class="fas fa-tasks icon danger"></i>
+                        <p class="label">처리 대기 주문</p>
+                        <p class="value">15 건</p>
+                        <span class="change neutral">변동 없음</span>
+                    </div>
+                </div>
+                
+                <div class="main-sections-grid">
+                    <div class="section chart-section">
+                        <h3>월별 매출 추이</h3>
+                        <div class="chart-mock">
+                            <img src="https://via.placeholder.com/800x300/f3f4f6/4b5563?text=Monthly+Revenue+Chart+Mock" alt="매출 차트 목업">
+                        </div>
+                    </div>
+
+                    <div class="section activity-section">
+                        <h3>최근 활동</h3>
+                        <ul class="activity-list">
+                            <li><span class="time">1분 전</span> 신규 주문 #00932 접수</li>
+                            <li><span class="time">1시간 전</span> '코튼 셔츠' 재고 경고</li>
+                            <li><span class="time">3시간 전</span> 신규 사용자 가입 (user@test.com)</li>
+                        </ul>
+                        <a href="#" class="view-all">전체 보기</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

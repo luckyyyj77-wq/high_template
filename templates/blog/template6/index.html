@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Template 6: Tag Filter Blog — 태그별 필터 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog · Tag Filter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container head">
+    <h1>태그 필터</h1>
+    <div class="tags">
+      <button data-tag="all" class="active">All</button>
+      <button data-tag="design">Design</button>
+      <button data-tag="dev">Dev</button>
+      <button data-tag="life">Life</button>
+    </div>
+  </header>
+  <main class="container grid">
+    <article class="card" data-tags="design"><h3>디자인 글</h3><p>설명</p></article>
+    <article class="card" data-tags="dev"><h3>개발 글</h3><p>설명</p></article>
+    <article class="card" data-tags="life"><h3>라이프 글</h3><p>설명</p></article>
+    <article class="card" data-tags="design dev"><h3>디자인/개발</h3><p>설명</p></article>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

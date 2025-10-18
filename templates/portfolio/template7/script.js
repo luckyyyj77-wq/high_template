@@ -1,0 +1,1 @@
+// Template 7: Simple list; JS optional.

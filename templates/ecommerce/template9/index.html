@@ -1,0 +1,56 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>환불 / 교환 신청</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="refund-container">
+  <h1>환불 / 교환 신청</h1>
+  <p class="sub">주문 정보를 입력하고 사유를 작성해주세요.</p>
+
+  <!-- 🔹 환불/교환 폼 -->
+  <form id="refundForm">
+    <!-- ✅ 주문번호 -->
+    <label for="orderNumber">주문번호</label>
+    <input type="text" id="orderNumber" placeholder="예: ORD1234567" required>
+
+    <!-- ✅ 신청 구분 -->
+    <label>신청 구분</label>
+    <div class="radio-group">
+      <label><input type="radio" name="type" value="refund" checked> 환불</label>
+      <label><input type="radio" name="type" value="exchange"> 교환</label>
+    </div>
+
+    <!-- ✅ 사유 -->
+    <label for="reason">신청 사유</label>
+    <textarea id="reason" rows="4" placeholder="사유를 구체적으로 입력해주세요." required></textarea>
+
+    <!-- ✅ 환불 계좌 정보 -->
+    <section id="refundAccountSection">
+      <h2>환불 계좌 정보</h2>
+      <label for="bank">은행명</label>
+      <input type="text" id="bank" placeholder="예: 국민은행" required>
+      
+      <label for="account">계좌번호</label>
+      <input type="text" id="account" placeholder="하이픈(-) 없이 입력" required>
+      
+      <label for="holder">예금주명</label>
+      <input type="text" id="holder" placeholder="홍길동" required>
+    </section>
+
+    <!-- ✅ 제출 버튼 -->
+    <button type="submit" class="submit-btn">신청하기</button>
+  </form>
+
+  <!-- ✅ 결과 메시지 -->
+  <div id="resultBox" class="result-box hidden">
+    <p id="resultText"></p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* ===============================
+   💰 환불 / 교환 폼 스타일
+   - 심플 카드형 구조
+   - textarea + 섹션 구분
+================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.refund-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 34px;
+  width: 420px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.sub {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+#refundAccountSection {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+#refundAccountSection h2 {
+  font-size: 15px;
+  color: #2563eb;
+  margin: 0 0 12px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 결과 메시지 */
+.result-box {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+.hidden {
+  display: none;
+}

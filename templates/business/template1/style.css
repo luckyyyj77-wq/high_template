@@ -1,0 +1,13 @@
+
+:root{--maxw:1200px;--accent:#2563eb;--bg:#fff;--text:#111}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:"Inter","Noto Sans KR",sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid #eee}
+.top nav a{margin-left:12px;color:#4b5563}
+.hero{background:linear-gradient(135deg,#2563eb,#60a5fa);color:#fff;padding:80px 0}
+.hero .btn{display:inline-block;margin-top:10px;background:#fff;color:#111;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px 0}
+.card{border:1px solid #e5e7eb;border-radius:14px;padding:16px;box-shadow:0 8px 20px rgba(37,99,235,.12);background:#fff}
+.foot{padding:20px 0;border-top:1px solid #eee;margin-top:20px;text-align:center}
+@media(max-width:900px){.grid3{grid-template-columns:1fr}}

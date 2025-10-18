@@ -1,0 +1,81 @@
+/* ===============================
+   📘 기본 주문서 스타일
+   - 전체는 라이트톤 카드형 구조
+   - 각 섹션은 부드러운 그림자와 여백
+================================= */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.order-container {
+  background: #fff;
+  border-radius: 16px;
+  width: 400px;
+  padding: 36px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+.desc {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: #2563eb;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+.btn:hover {
+  background: #1d4ed8;
+}

@@ -1,0 +1,17 @@
+{
+  "meta_title": "High Templater",
+  "site_title": "High Templater",
+  "site_subtitle": "コピペですぐに始められるウェブテンプレートハブ。",
+  "footer": "© 2025 High Templater. すべてのテンプレートは MIT ライセンスです。",
+
+  "cat_landing": "ランディングページ",
+  "cat_portfolio": "ポートフォリオ",
+  "cat_blog": "ブログ / マガジン",
+  "cat_business": "ビジネス / 企業",
+  "cat_login": "ログイン / フォーム",
+  "cat_ecommerce": "EC サイト",
+  "cat_dashboard": "ダッシュボード / 管理",
+  "cat_components": "コンポーネント / UI キット",
+  "cat_tools": "ユーティリティツール",
+  "cat_creative": "クリエイティブ / 実験"
+}

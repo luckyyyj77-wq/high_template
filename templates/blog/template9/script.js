@@ -1,0 +1,1 @@
+// Template 9: No JS required.

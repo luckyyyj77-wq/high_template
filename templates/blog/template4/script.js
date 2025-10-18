@@ -1,0 +1,1 @@
+// Template 4: No JS required.

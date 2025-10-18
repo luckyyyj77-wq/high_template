@@ -1,0 +1,133 @@
+/* ===========================================
+   Creative Showcase Styles
+   - animated gradient + blobs
+   - glassmorphism cards + neon focus
+   - dark / light theme
+   =========================================== */
+
+:root{
+  --bg: #0b1020;
+  --fg: #e6ebff;
+  --muted: #9aa6c1;
+  --card: rgba(255,255,255,0.06);
+  --stroke: rgba(255,255,255,0.15);
+  --accent: #7c3aed;     /* 보라 */
+  --accent2:#22d3ee;     /* 사이언 */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+body.light{
+  --bg: #f7f8fc;
+  --fg: #0f172a;
+  --muted:#536179;
+  --card: rgba(255,255,255,0.9);
+  --stroke: rgba(17,24,39,0.08);
+  --accent: #2563eb;
+  --accent2:#10b981;
+  --shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:ui-sans-serif,system-ui,"Noto Sans KR",Arial;
+  color:var(--fg); background:var(--bg);
+  overflow-x:hidden;
+}
+
+/* 🔹 배경 애니메이션 */
+.bg{
+  position:fixed; inset:0; z-index:-1;
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(124,58,237,.25), transparent 60%),
+              radial-gradient(1000px 600px at 90% 10%, rgba(34,211,238,.22), transparent 60%),
+              radial-gradient(1000px 600px at 50% 100%, rgba(34,197,94,.18), transparent 60%);
+  filter:saturate(1.1);
+}
+.blob{
+  position:absolute; width:44vmax; height:44vmax; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), rgba(255,255,255,0) 60%);
+  mix-blend-mode: overlay; filter: blur(50px); opacity:.5; animation: float 18s ease-in-out infinite;
+}
+.b1{ left:-10vmax; top:-8vmax; }
+.b2{ right:-12vmax; top:10vmax; animation-duration:22s; }
+.b3{ left:20vmax; bottom:-14vmax; animation-duration:26s; }
+@keyframes float{
+  0%,100%{ transform: translateY(0) translateX(0) scale(1); }
+  50%{ transform: translateY(-20px) translateX(10px) scale(1.05); }
+}
+
+/* 🔹 상단바 */
+.topbar{
+  position:sticky; top:0; display:flex; justify-content:space-between; align-items:center;
+  padding:18px 24px; backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, rgba(0,0,0,.25), transparent);
+  border-bottom:1px solid var(--stroke);
+}
+.brand{ display:flex; align-items:center; gap:10px; letter-spacing:1px; }
+.logo{ display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2)); color:#fff; font-size:14px; }
+.actions button{
+  background:transparent; border:1px solid var(--stroke); color:var(--fg);
+  padding:8px 12px; border-radius:10px; cursor:pointer; transition:.2s;
+}
+.actions button:hover{ box-shadow: 0 0 0 3px rgba(124,58,237,.25); }
+
+/* 🔹 히어로 */
+.hero{ text-align:center; padding:60px 24px 40px; position:relative; }
+.typewriter{
+  font-size: clamp(28px, 5vw, 56px); line-height:1.05; margin:0 0 8px;
+  text-shadow: 0 2px 24px rgba(124,58,237,.25);
+}
+.caret{ color:var(--accent2); animation: blink 1s steps(1) infinite; }
+@keyframes blink{ 50%{ opacity:0; } }
+.sub{ color:var(--muted); margin:0 0 20px; }
+
+.cta{ display:flex; gap:12px; justify-content:center; }
+.magnetic{
+  position:relative; overflow:hidden;
+  border:none; border-radius:14px; cursor:pointer; font-weight:700;
+  padding:14px 18px; color:#fff; background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow: var(--shadow); transform: translateZ(0);
+}
+.magnetic.ghost{
+  color:var(--fg); background:transparent; border:1px solid var(--stroke);
+}
+.magnetic::after{
+  content:""; position:absolute; inset:-40% -40%;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.25), transparent 40%);
+  transition: opacity .25s; opacity:0; pointer-events:none;
+}
+.magnetic:hover::after{ opacity:1; }
+
+/* 🔹 패럴랙스 카드 그리드 */
+.grid{
+  display:grid; gap:18px; padding:26px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  max-width:1100px; margin:0 auto;
+}
+.card{
+  background: var(--card); border: 1px solid var(--stroke); border-radius:16px;
+  padding:18px; backdrop-filter: blur(10px);
+  box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(124,58,237,.45);
+  box-shadow: 0 18px 40px rgba(124,58,237,.18);
+}
+.card h3{ margin:0 0 6px; font-size:18px; }
+.card p{ margin:0 0 10px; color:var(--muted); }
+.chip{
+  display:inline-block; padding:6px 10px; font-size:12px; border-radius:999px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; text-decoration:none;
+}
+
+/* 🔹 푸터 */
+.foot{ text-align:center; color:var(--muted); padding:24px 16px 60px; }
+
+/* 🔹 컨페티 캔버스 (히어로 위 레이어) */
+#confetti{
+  position:absolute; inset:0; pointer-events:none;
+}
+
+/* 접근성 포커스 */
+:focus-visible{ outline: 3px solid var(--accent2); outline-offset: 2px; border-radius:8px; }

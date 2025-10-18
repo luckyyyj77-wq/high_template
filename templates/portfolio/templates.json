@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Template 1",
+    "file": "/templates/portfolio/template1/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #1"
+  },
+  {
+    "title": "Template 2",
+    "file": "/templates/portfolio/template2/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #2"
+  },
+  {
+    "title": "Template 3",
+    "file": "/templates/portfolio/template3/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #3"
+  },
+  {
+    "title": "Template 4",
+    "file": "/templates/portfolio/template4/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #4"
+  },
+  {
+    "title": "Template 5",
+    "file": "/templates/portfolio/template5/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #5"
+  },
+  {
+    "title": "Template 6",
+    "file": "/templates/portfolio/template6/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #6"
+  },
+  {
+    "title": "Template 7",
+    "file": "/templates/portfolio/template7/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #7"
+  },
+  {
+    "title": "Template 8",
+    "file": "/templates/portfolio/template8/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #8"
+  },
+  {
+    "title": "Template 9",
+    "file": "/templates/portfolio/template9/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #9"
+  },
+  {
+    "title": "Template 10",
+    "file": "/templates/portfolio/template10/index.html",
+    "color": "#8f80ff",
+    "desc": "기본 레이아웃 템플릿 #10"
+  }
+]

@@ -1,0 +1,76 @@
+/* ===============================================
+   🧠 칸반 대시보드 스타일
+   - 3단 컬럼 / 드래그 시 강조 효과
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f9fafb;
+}
+
+.topbar {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 칸반 전체 레이아웃 */
+.kanban-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* 개별 컬럼 */
+.kanban-column {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.kanban-column h2 {
+  font-size: 16px;
+  color: #2563eb;
+  margin: 0 0 10px;
+}
+
+/* 카드 리스트 */
+.kanban-list {
+  flex: 1;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 200px;
+  transition: background 0.2s;
+}
+
+/* 개별 카드 */
+.card {
+  background: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 8px;
+  cursor: grab;
+  font-size: 14px;
+  user-select: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 드래그 대상 열 강조 */
+.kanban-list.drag-over {
+  background: #dbeafe;
+  border: 2px dashed #2563eb;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dashboard 03 - Full-Width Data Table</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar closed">...</aside>
+
+        <div class="main-content full-width">
+            <header class="top-bar">
+                <button id="sidebarToggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+                <div class="page-title">주문 관리 (Order Management)</div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="주문 번호, 고객 이름 검색...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </header>
+
+            <main class="content-area">
+                
+                <div class="table-controls">
+                    <div class="filters">
+                        <label for="statusFilter">상태별:</label>
+                        <select id="statusFilter">
+                            <option value="all">전체</option>
+                            <option value="pending">처리 대기</option>
+                            <option value="completed">완료</option>
+                            <option value="cancelled">취소</option>
+                        </select>
+                        <label for="dateFilter">기간:</label>
+                        <input type="date" id="dateFilter">
+                    </div>
+                    <button class="export-btn"><i class="fas fa-file-export"></i> 엑셀 내보내기</button>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th data-column="id" class="sortable active asc">주문 번호 <i class="fas fa-sort-up"></i></th>
+                                <th data-column="customer" class="sortable">고객명 <i class="fas fa-sort"></i></th>
+                                <th data-column="amount" class="sortable">총액 <i class="fas fa-sort"></i></th>
+                                <th data-column="status">상태</th>
+                                <th data-column="date" class="sortable">주문일 <i class="fas fa-sort"></i></th>
+                                <th>액션</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableBody">
+                            <tr data-status="completed">
+                                <td>#D00101</td>
+                                <td>김철수</td>
+                                <td>150,000원</td>
+                                <td><span class="status-chip completed">완료</span></td>
+                                <td>2025-10-15</td>
+                                <td><button class="detail-btn">상세</button></td>
+                            </tr>
+                            <tr data-status="pending">
+                                <td>#D00102</td>
+                                <td>이영희</td>
+                                <td>45,000원</td>
+                                <td><span class="status-chip pending">처리 대기</span></td>
+                                <td>2025-10-16</td>
+                                <td><button class="detail-btn">상세</button></td>
+                            </tr>
+                            <tr data-status="cancelled">
+                                <td>#D00103</td>
+                                <td>박민수</td>
+                                <td>220,000원</td>
+                                <td><span class="status-chip cancelled">취소</span></td>
+                                <td>2025-10-17</td>
+                                <td><button class="detail-btn">상세</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination-info">
+                    총 150건 중 1 - 10 표시
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

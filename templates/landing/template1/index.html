@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Template 1: Hero Centered — 중앙 CTA형 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Template 1 · Hero Centered</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- [HEADER] 로고/네비 -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> High Templater</div>
+      <button class="menu-toggle" aria-label="메뉴 열기">Menu</button>
+      <nav aria-label="주요">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- [HERO] 중앙 CTA 블록 -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>아이디어를 더 빨리 검증하세요</h1>
+      <p>보편적인 섹션 구성과 반응형 그리드를 갖춘 첫 화면 프레임입니다.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#features">시작하기</a>
+        <a class="btn btn-outline" href="#contact">문의하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [FEATURES] 3단 카드 -->
+  <section id="features" class="features">
+    <div class="container grid-3">
+      <article class="card"><h3>시맨틱 구조</h3><p class="muted">header/section/footer 기반</p></article>
+      <article class="card"><h3>반응형</h3><p class="muted">Grid/Flex로 모바일 대응</p></article>
+      <article class="card"><h3>확장성</h3><p class="muted">CSS 변수와 블록 주석</p></article>
+    </div>
+  </section>
+
+  <!-- [CONTACT] 구독 폼 -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <form id="newsletter-form" class="card inline">
+        <input type="email" placeholder="이메일 주소" required />
+        <button class="btn btn-primary" type="submit">구독</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- [FOOTER] -->
+  <footer><div class="container">© 2025 High Templater</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

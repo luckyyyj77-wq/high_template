@@ -1,0 +1,30 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>배송 조회</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="track-container">
+  <h1>배송 조회</h1>
+  <p class="sub">송장번호를 입력하고 <strong>조회</strong> 버튼을 눌러주세요.</p>
+
+  <!-- 🔹 배송 조회 폼 -->
+  <form id="trackForm">
+    <label>송장번호</label>
+    <input type="text" id="trackingNumber" placeholder="예: 1234-5678-9012" required>
+    <button type="submit" class="btn">조회</button>
+  </form>
+
+  <!-- 🔹 결과 표시 영역 -->
+  <section id="resultBox" class="result-box hidden">
+    <h2>배송 상태</h2>
+    <p id="resultText">조회 중...</p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

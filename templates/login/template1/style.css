@@ -1,0 +1,197 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* 글로벌 스타일 및 폰트 설정 (Global Styles and Font Definitions) */
+/* Noto Sans KR, Inter 폰트 사용. Noto Sans KR이 한글에 우선 적용됨. */
+:root {
+    --primary-color: #6366f1;   /* Primary Accent Color (예: 보라색 계열) */
+    --secondary-color: #f59e0b; /* Secondary Color (보조 색상) */
+    --bg-color: #f9fafb;        /* Light Background Color */
+    --text-color: #1f2937;      /* Dark Text Color */
+    --max-width: 1200px;        /* Global Max Width Limit */
+}
+
+/* 폰트 적용 및 기본 마진/패딩 제거 */
+body {
+    margin: 0;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif; /* 폰트 우선 순위 */
+    line-height: 1.6;
+    background-color: var(--bg-color); /* 배경 색상 적용 */
+    color: var(--text-color);
+    display: flex; /* 전체 화면 중앙 정렬을 위한 Flex 설정 */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정 */
+    padding: 20px;
+    box-sizing: border-box; /* 패딩이 전체 크기에 포함되도록 설정 */
+}
+
+/* 로그인 컨테이너 (Login Container) - 전체 레이아웃 분할 */
+.login-container {
+    display: flex;
+    max-width: var(--max-width); /* 최대 너비 1200px 적용 */
+    width: 100%;
+    height: 600px; /* 고정 높이 설정 (조절 가능) */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    overflow: hidden; /* 모서리 둥글게 처리된 부분에서 내용이 넘치지 않도록 설정 */
+}
+
+/* 1. 이미지 영역 (Image Area) - 좌측 분할 영역 */
+.image-area {
+    flex: 1; /* 가용 공간을 균등하게 차지 */
+    background: linear-gradient(135deg, var(--primary-color), #a855f7); /* 그라데이션 배경 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.image-area .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.image-area .slogan {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 300px;
+}
+
+/* 2. 폼 영역 (Form Area) - 우측 분할 영역 */
+.form-area {
+    flex: 1; /* 가용 공간을 균등하게 차지 */
+    display: flex;
+    justify-content: center; /* 폼 내용을 중앙 정렬 */
+    align-items: center;
+    padding: 2rem;
+}
+
+/* 폼 내부 컨테이너 (Form Wrapper) - 폼의 최대 너비 제한 */
+.form-wrapper {
+    width: 100%;
+    max-width: 380px; /* 폼 컨텐츠의 최대 너비 */
+}
+
+.form-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.form-wrapper .subtitle {
+    margin-bottom: 2rem;
+    color: #6b7280;
+}
+
+/* 입력 그룹 (Input Group) 스타일 */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box; /* 패딩을 너비에 포함 */
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none; /* 브라우저 기본 포커스 아웃라인 제거 */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* 옵션 및 비밀번호 찾기 링크 */
+.options {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* 로그인 버튼 (Login Button) 스타일 */
+.login-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #4f46e5; /* Primary Color의 약간 어두운 버전 */
+}
+
+/* 회원가입 링크 (Sign Up Link) */
+.signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* 미디어 쿼리 (Media Query) - 모바일 대응 (max-width: 768px) */
+@media (max-width: 768px) {
+    /* 모바일에서는 분할 화면 대신 하나의 컬럼으로 표시 */
+    .login-container {
+        flex-direction: column; /* 세로 정렬 */
+        height: auto; /* 높이 자동 조절 */
+        border-radius: 0; /* 모바일 전체 화면 사용 시 둥근 모서리 제거 */
+        box-shadow: none;
+    }
+
+    /* 이미지 영역 숨기기 (또는 상단에 작게 표시) - 여기서는 숨김 처리 */
+    .image-area {
+        display: none;
+    }
+    
+    /* 폼 영역에 패딩을 더주고 배경 색상을 통일 */
+    .form-area {
+        padding: 2rem 1.5rem;
+        width: 100%;
+    }
+
+    /* 폼 제목 크기 조절 */
+    .form-wrapper h2 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        /* 모바일 환경에서는 뷰포트 높이보다 길어질 수 있으므로 패딩만 유지 */
+        min-height: auto;
+    }
+}

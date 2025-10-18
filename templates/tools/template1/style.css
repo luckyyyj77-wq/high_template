@@ -1,0 +1,81 @@
+/* =============================================
+   🧮 계산기 스타일 (다크톤)
+================================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #1e293b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.calc-container {
+  width: 320px;
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  font-size: 18px;
+  color: #60a5fa;
+  margin-bottom: 12px;
+}
+
+.display {
+  background: #1e293b;
+  padding: 16px;
+  font-size: 28px;
+  border-radius: 8px;
+  text-align: right;
+  margin-bottom: 12px;
+  min-height: 48px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.btn {
+  background: #334155;
+  border: none;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 18px;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn:hover {
+  background: #475569;
+}
+.btn.gray {
+  background: #475569;
+}
+.btn.equal {
+  background: #2563eb;
+}
+.btn.equal:hover {
+  background: #1d4ed8;
+}
+.btn.zero {
+  grid-column: span 2;
+}
+
+/* 계산 이력 */
+.history {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: right;
+  height: 32px;
+  overflow: hidden;
+}

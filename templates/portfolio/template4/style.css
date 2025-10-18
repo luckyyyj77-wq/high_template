@@ -1,0 +1,12 @@
+
+:root{--maxw:1200px}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:#0b1020;color:#e5e7eb}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.head{padding:40px 0 10px}.sub{opacity:.75}
+.masonry{column-count:3;column-gap:12px;padding:20px 0}
+.masonry img{width:100%;margin:0 0 12px;border-radius:12px;break-inside:avoid;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center}
+.lightbox img{max-width:90%;max-height:85%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.8)}
+.lightbox.show{display:flex}
+.foot{padding:20px 0;border-top:1px solid #1f2937;margin-top:20px;text-align:center}
+@media(max-width:900px){.masonry{column-count:2}}@media(max-width:560px){.masonry{column-count:1}}

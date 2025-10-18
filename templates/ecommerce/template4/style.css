@@ -1,0 +1,130 @@
+/* ================================
+   💳 결제 모달 스타일
+   - 중앙 팝업 구조
+   - 다크 블러 배경
+   - 초보자용 주석 포함
+================================ */
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9fafb;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.pay-btn {
+  padding: 14px 28px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+.pay-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 🔹 모달 영역 전체를 덮는 컨테이너 */
+.modal.hidden {
+  display: none;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* 🔹 어두운 배경 + 블러 효과 */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* 🔹 중앙 박스 */
+.modal-box {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  width: 360px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  z-index: 1;
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  color: #2563eb;
+}
+.sub {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #374151;
+}
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* 🔹 제출 버튼 */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 🔹 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #2563eb;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>칸반 대시보드</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>프로젝트 칸반 보드</h1>
+</header>
+
+<main class="kanban-container">
+  <!-- 🔹 칸반 열 -->
+  <section class="kanban-column" data-status="todo">
+    <h2>할 일 (To Do)</h2>
+    <div class="kanban-list" id="todo">
+      <div class="card" draggable="true">UI 디자인 수정</div>
+      <div class="card" draggable="true">상품 상세페이지 테스트</div>
+    </div>
+  </section>
+
+  <section class="kanban-column" data-status="progress">
+    <h2>진행 중 (In Progress)</h2>
+    <div class="kanban-list" id="progress">
+      <div class="card" draggable="true">API 연동</div>
+    </div>
+  </section>
+
+  <section class="kanban-column" data-status="done">
+    <h2>완료 (Done)</h2>
+    <div class="kanban-list" id="done">
+      <div class="card" draggable="true">로그인 기능 구현</div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

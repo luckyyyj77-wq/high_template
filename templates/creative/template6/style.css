@@ -1,0 +1,59 @@
+/* ============================================
+   🪞 3D Card Tilt Effect
+   - perspective + transform
+================================================ */
+html,body{
+  margin:0;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0b0f1c;
+  font-family:"Noto Sans KR",sans-serif;
+  color:#fff;
+}
+
+.card-wrap{
+  perspective:1000px;
+}
+
+.card{
+  width:300px;
+  height:400px;
+  background:linear-gradient(135deg,#1e293b,#334155);
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transform-style:preserve-3d;
+  transition:transform 0.2s ease, box-shadow 0.2s;
+}
+
+.card h1{
+  font-size:28px;
+  margin-bottom:10px;
+  color:#22d3ee;
+}
+.card p{
+  color:rgba(255,255,255,0.7);
+  font-size:14px;
+}
+
+/* hover시 반사빛 추가 */
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.15), transparent 60%);
+  pointer-events:none;
+  transition:background-position 0.1s;
+}
+
+/* 클릭시 살짝 튀어나옴 */
+.card:active{
+  transform:scale(1.04) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+}

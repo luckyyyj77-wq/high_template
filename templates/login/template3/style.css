@@ -1,0 +1,109 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* Login 03 - Minimalist Background Image Styles */
+:root {
+    --primary-color: #ef4444; /* Accent Red */
+    --text-color: #374151;
+    --background-opacity: 0.95; /* 폼 배경 투명도 */
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 배경 이미지 및 풀스크린 설정 */
+.bg-image-body {
+    margin: 0;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-image: url('https://picsum.photos/1920/1080?random=1'); /* 배경 이미지 URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 로그인 오버레이 (배경 이미지 위에 위치) */
+.login-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 미니멀리스트 폼 박스 */
+.login-box.minimalist {
+    width: 100%;
+    max-width: 360px; /* 좁고 간결한 너비 */
+    padding: 3rem 2rem;
+    background-color: rgba(255, 255, 255, var(--background-opacity)); /* 반투명 흰색 배경 */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+    text-align: center;
+}
+
+.login-box .logo-text {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.login-box .slogan-text {
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+}
+
+/* 입력 그룹 (하단 선만 강조) */
+.input-group {
+    margin-bottom: 2rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    border: none; /* 상하좌우 경계선 제거 */
+    border-bottom: 2px solid #d1d5db; /* 하단 선만 유지 */
+    background: transparent; /* 배경 투명 */
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-bottom-color 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--primary-color);
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+/* 옵션 및 버튼 */
+.options {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.forgot-password {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.minimal-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* 모바일 대응: 배경 이미지 유지하며 중앙 카드 유지 */
+@media (max-width: 500px) {
+    .login-box.minimalist {
+        max-width: 90%;
+        margin: 20px;
+    }
+}

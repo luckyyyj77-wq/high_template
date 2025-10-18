@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>상품 리뷰 작성</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="review-container">
+  <h1>상품 리뷰 작성</h1>
+  <p class="sub">상품을 평가하고 후기를 남겨주세요.</p>
+
+  <!-- 🔹 리뷰 폼 -->
+  <form id="reviewForm" enctype="multipart/form-data">
+    
+    <!-- ✅ 별점 -->
+    <label>평점</label>
+    <div class="stars" id="starBox">
+      <!-- 별 5개 표시 -->
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
+    </div>
+    <p id="ratingText" class="rating-text">평점을 선택하세요.</p>
+
+    <!-- ✅ 제목 -->
+    <label for="title">제목</label>
+    <input type="text" id="title" placeholder="리뷰 제목" required>
+
+    <!-- ✅ 내용 -->
+    <label for="content">내용</label>
+    <textarea id="content" rows="5" placeholder="상품에 대한 솔직한 후기를 작성해주세요." required></textarea>
+
+    <!-- ✅ 이미지 첨부 -->
+    <label for="image">이미지 첨부 (선택)</label>
+    <input type="file" id="image" accept="image/*">
+
+    <!-- ✅ 제출 버튼 -->
+    <button type="submit" class="submit-btn">리뷰 등록</button>
+  </form>
+
+  <!-- ✅ 결과 메시지 -->
+  <div id="resultBox" class="result-box hidden">
+    <p id="resultText"></p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

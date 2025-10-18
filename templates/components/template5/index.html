@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>탭 전환 컴포넌트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="tab-container">
+  <h1>탭 전환 예제</h1>
+
+  <!-- 🔹 탭 버튼 영역 -->
+  <div class="tab-buttons" id="tabButtons">
+    <button class="active" data-tab="tab1">프로필</button>
+    <button data-tab="tab2">결제정보</button>
+    <button data-tab="tab3">주문내역</button>
+    <button data-tab="tab4">알림설정</button>
+  </div>
+
+  <!-- 🔹 탭 콘텐츠 -->
+  <div class="tab-content">
+    <div class="tab-panel active" id="tab1">
+      <h2>프로필 정보</h2>
+      <p>사용자 이름, 이메일, 프로필 사진 등을 관리할 수 있습니다.</p>
+    </div>
+
+    <div class="tab-panel" id="tab2">
+      <h2>결제정보</h2>
+      <p>등록된 카드, 포인트 내역, 자동결제 설정 등을 확인하세요.</p>
+    </div>
+
+    <div class="tab-panel" id="tab3">
+      <h2>주문내역</h2>
+      <p>최근 주문 상태, 환불/교환 이력 등을 한눈에 볼 수 있습니다.</p>
+    </div>
+
+    <div class="tab-panel" id="tab4">
+      <h2>알림설정</h2>
+      <p>이메일 및 앱 푸시 알림 수신 여부를 관리할 수 있습니다.</p>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

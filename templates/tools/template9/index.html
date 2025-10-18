@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이미지 압축기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="compressor-container">
+  <h1>🖼️ 이미지 압축기</h1>
+
+  <!-- 🔹 업로드 -->
+  <input type="file" id="imageInput" accept="image/*">
+
+  <!-- 🔹 품질 조절 -->
+  <div class="quality-control">
+    <label>품질: <span id="qualityValue">80</span>%</label>
+    <input type="range" id="qualityRange" min="10" max="100" value="80">
+  </div>
+
+  <!-- 🔹 미리보기 -->
+  <div class="preview-box">
+    <div>
+      <p>원본</p>
+      <img id="originalImg" src="" alt="">
+    </div>
+    <div>
+      <p>압축 결과</p>
+      <img id="compressedImg" src="" alt="">
+    </div>
+  </div>
+
+  <!-- 🔹 버튼 -->
+  <button id="downloadBtn">압축 이미지 다운로드</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

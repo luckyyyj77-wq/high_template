@@ -1,0 +1,17 @@
+{
+  "meta_title": "High Templater",
+  "site_title": "High Templater",
+  "site_subtitle": "A web template hub you can start by simply copying.",
+  "footer": "© 2025 High Templater. All templates are MIT-licensed.",
+
+  "cat_landing": "Landing Page",
+  "cat_portfolio": "Portfolio",
+  "cat_blog": "Blog / Magazine",
+  "cat_business": "Business / Company",
+  "cat_login": "Login / Form",
+  "cat_ecommerce": "E-Commerce",
+  "cat_dashboard": "Dashboard / Admin",
+  "cat_components": "Components / UI Kit",
+  "cat_tools": "Utility Tools",
+  "cat_creative": "Creative / Experimental"
+}

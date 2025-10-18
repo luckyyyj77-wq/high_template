@@ -1,0 +1,1 @@
+// Template 3: Hover animations are CSS-based; JS is optional here.

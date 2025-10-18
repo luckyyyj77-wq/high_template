@@ -1,0 +1,112 @@
+body{font-family:Inter,'Noto Sans KR',sans-serif}/* ================================
+   🌟 상품 리뷰 폼 스타일
+   - 별점 클릭 / 텍스트 / 이미지 첨부
+   - 심플 카드형
+================================ */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.review-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 34px;
+  width: 420px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.sub {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* 별점 스타일 */
+.stars {
+  font-size: 28px;
+  color: #d1d5db;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 4px;
+}
+.stars span.active {
+  color: #facc15;
+}
+.rating-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+input[type="file"] {
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 결과 메시지 */
+.result-box {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,23 @@
+
+:root{
+  --primary:#6366f1; --accent:#a855f7; --text:#222; --bg:#fff; --gray:#f3f4f6;
+  --maxw:1200px; --radius:16px; --shadow:0 8px 24px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Inter","Noto Sans KR",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.site-header{position:sticky;top:0;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:800;display:flex;align-items:center;gap:.6rem}.brand .dot{width:12px;height:12px;border-radius:50%;background:var(--primary)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px}nav a{padding:6px 10px;border-radius:10px}.menu-toggle{display:none}
+.hero{padding:84px 0;background:linear-gradient(180deg,#fff 0%,var(--gray) 100%)}
+.hero-inner{text-align:center}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:12px 18px;border:none;border-radius:12px;font-weight:700;cursor:pointer}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow)}
+.btn-outline{border:2px solid #ddd;background:#fff}
+.features{padding:56px 0}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.contact{padding:40px 0}.inline{display:flex;gap:10px;align-items:center;padding:16px;border-radius:16px;border:1px solid #eee;box-shadow:var(--shadow)}
+.inline input{flex:1;min-width:220px;padding:12px 14px;border:1px solid #ddd;border-radius:10px}
+footer{padding:24px 0;border-top:1px solid #eee}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr}.menu-toggle{display:block;background:var(--primary);color:#fff;border:none;padding:6px 10px;border-radius:8px}nav ul{display:none}nav.open ul{display:flex;flex-direction:column;background:#fff;padding:10px;border-radius:10px;box-shadow:var(--shadow)}}

@@ -1,0 +1,141 @@
+/* Dashboard 05 - Kanban Task Management Styles */
+
+/* 1. 기본 변수 */
+:root {
+    --primary-color: #ef4444;       /* Red for Action/High Priority */
+    --accent-color: #22c55e;        /* Green for Done/Success */
+    --text-color: #1f2937;
+    --bg-color: #f7f9fc;
+    --card-bg: #ffffff;
+}
+
+body {
+    /* ... (기본 스타일 유지) ... */
+    background-color: var(--bg-color);
+}
+
+/* 2. 레이아웃 (스크롤 가능한 보드) */
+.main-content {
+    margin-left: 0; 
+}
+
+.content-area {
+    padding: 1rem; /* 보드에 여백을 더 주기 위해 패딩 축소 */
+}
+
+/* 3. 칸반 보드 컨테이너 */
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* 컬럼이 많아질 경우 가로 스크롤 */
+    padding: 10px;
+    height: calc(100vh - 120px); /* 뷰포트 높이에 맞춤 */
+}
+
+/* 4. 작업 컬럼 (Task Column) */
+.task-column {
+    flex: 0 0 320px; /* 고정 너비 (320px) */
+    background: #e5e7eb; /* 컬럼 배경 */
+    border-radius: 8px;
+    padding: 15px;
+    height: 100%; /* 부모 높이 상속 */
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-header { border-bottom-color: var(--primary-color); }
+.inprogress-header { border-bottom-color: #f59e0b; /* Amber */ }
+.done-header { border-bottom-color: var(--accent-color); }
+
+.task-list {
+    flex-grow: 1;
+    overflow-y: auto; /* 작업 리스트 내부 스크롤 */
+    padding-right: 5px; /* 스크롤바 공간 확보 */
+}
+
+/* 5. 작업 카드 (Task Card) */
+.task-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    cursor: grab;
+    border-left: 5px solid transparent;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* 우선순위 표시 */
+.task-card[data-priority="high"] { border-left-color: var(--primary-color); }
+.task-card[data-priority="medium"] { border-left-color: #f59e0b; }
+.task-card[data-priority="low"] { border-left-color: #3b82f6; }
+
+.task-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.task-meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.priority {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.priority.high { background: #fee2e2; color: #ef4444; }
+.priority.medium { background: #fef3c7; color: #d97706; }
+.priority.low { background: #dbeafe; color: #3b82f6; }
+
+/* 드래그 상태 및 드롭 영역 */
+.task-card.dragging {
+    opacity: 0.4;
+    cursor: grabbing;
+}
+
+.task-list.drag-over {
+    background: rgba(var(--accent-color), 0.1);
+    border: 2px dashed var(--accent-color);
+}
+
+.add-task-btn {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* 6. 미디어 쿼리 */
+@media (max-width: 768px) {
+    .kanban-board {
+        flex-direction: row; /* 가로 스크롤 유지 */
+        height: auto;
+    }
+    .task-column {
+        flex: 0 0 80%; /* 모바일에서 컬럼 너비 증가 */
+        min-width: 300px;
+    }
+}
