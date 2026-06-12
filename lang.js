@@ -3,8 +3,8 @@ const HT_LANGS = ['ko','en','es','ja'];
 let HT_CURRENT = localStorage.getItem('ht_lang') || 'ko'; // 기본 한국어
 
 function langPath(lang){
-  // GitHub Pages 배포 환경을 고려하여 상대 경로로 수정
-  return `lang/${lang}.json`;
+  // 현재 도메인의 루트가 아닌, 현재 폴더 기준임을 명시 (./ 추가)
+  return `./lang/${lang}.json`;
 }
 
 async function loadLang(lang){
