@@ -92,7 +92,7 @@ footer{
 </head>
 <body>
 <header>
-  <div style="position:absolute;top:20px;right:20px;">
+  <div class="lang-select-wrapper">
     <select onchange="setLang(this.value)" style="padding:5px 10px;border-radius:8px;border:1px solid #ddd;cursor:pointer;">
       <option value="ko">한국어</option>
       <option value="en">English</option>
@@ -172,6 +172,17 @@ function renderGrid(dict) {
         <div class="emoji">${cat.emoji}</div>
         <div class="title">${title}</div>
         <div class="desc">${desc}</div>
+      </div>`;
+    div.onclick=()=>location.href=cat.path;
+    grid.appendChild(div);
+  });
+}
+
+// lang.js에서 renderGrid를 호출하므로 초기 렌더링은 위임됨
+</script>
+</body>
+</html>
+ <div class="desc">${desc}</div>
       </div>`;
     div.onclick=()=>location.href=cat.path;
     grid.appendChild(div);

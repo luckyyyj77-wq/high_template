@@ -12,14 +12,23 @@ function initQR() {
   const foreground = document.getElementById("fgColor").value;
   const background = document.getElementById("bgColor").value;
 
-  qr = new QRious({
-    element: document.getElementById('qrCanvas'),
-    value: text,
-    size: size,
-    foreground: foreground,
-    background: background,
-    level: 'H' // Error correction level
-  });
+  if (!qr) {
+    qr = new QRious({
+      element: document.getElementById('qrCanvas'),
+      value: text,
+      size: size,
+      foreground: foreground,
+      background: background,
+      level: 'M' // 중간 수준의 오류 복구 (문자열 호환성 향상)
+    });
+  } else {
+    qr.set({
+      value: text || " ",
+      size: size,
+      foreground: foreground,
+      background: background
+    });
+  }
 }
 
 const textInput = document.getElementById("textInput");
@@ -28,18 +37,12 @@ const fgColor = document.getElementById("fgColor");
 const bgColor = document.getElementById("bgColor");
 const sizeValue = document.getElementById("sizeValue");
 
-document.getElementById("generateBtn").addEventListener("click", () => {
-  if (!qr) {
-    initQR();
-  } else {
-    qr.set({
-      value: textInput.value || " ",
-      size: parseInt(sizeRange.value),
-      foreground: fgColor.value,
-      background: bgColor.value
-    });
-  }
-});
+// 실시간 생성 기능 추가
+textInput.addEventListener("input", initQR);
+fgColor.addEventListener("input", initQR);
+bgColor.addEventListener("input", initQR);
+
+document.getElementById("generateBtn").addEventListener("click", initQR);
 
 sizeRange.addEventListener("input", () => {
   sizeValue.textContent = sizeRange.value;

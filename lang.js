@@ -3,8 +3,10 @@ const HT_LANGS = ['ko','en','es','ja'];
 let HT_CURRENT = localStorage.getItem('ht_lang') || 'ko'; // 기본 한국어
 
 function langPath(lang){
-  // 현재 도메인의 루트가 아닌, 현재 폴더 기준임을 명시 (./ 추가)
-  return `./lang/${lang}.json`;
+  // 현재 URL 경로를 확인하여 깊이에 따라 상대 경로 조정
+  const isSubPage = location.pathname.includes('/templates/');
+  const prefix = isSubPage ? '../../' : './';
+  return `${prefix}lang/${lang}.json`;
 }
 
 async function loadLang(lang){
