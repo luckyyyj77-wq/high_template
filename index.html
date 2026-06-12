@@ -134,26 +134,28 @@ const categories = [
  {emoji:"🎨",title:"Creative",desc:"실험적 / 예술적 디자인",path:"templates/creative/index.html",color:"#fda4af",key:"cat_creative"}
 ];
 
-// 방문자 카운트 로직
-function updateVisitCount() {
-  const now = new Date();
-  const today = now.toISOString().split('T')[0];
-  
-  let stats = JSON.parse(localStorage.getItem('ht_stats') || '{}');
-  
-  if (!stats.total) stats.total = 0;
-  if (stats.lastVisit !== today) {
-    stats.today = 0;
-    stats.lastVisit = today;
+// 글로벌 방문자 카운트 로직 (CounterAPI 활용)
+async function updateVisitCount() {
+  const namespace = "high-templater-lucky"; // 고유 네임스페이스
+  const totalKey = "total-visits";
+  const todayKey = `visits-${new Date().toISOString().split('T')[0]}`;
+
+  try {
+    // 1. 전체 방문자 수 증가 및 가져오기
+    const totalRes = await fetch(`https://api.counterapi.dev/v1/${namespace}/${totalKey}/up`);
+    const totalData = await totalRes.json();
+    document.getElementById('totalVisits').textContent = totalData.count.toLocaleString();
+
+    // 2. 오늘 방문자 수 증가 및 가져오기
+    const todayRes = await fetch(`https://api.counterapi.dev/v1/${namespace}/${todayKey}/up`);
+    const todayData = await todayRes.json();
+    document.getElementById('todayVisits').textContent = todayData.count.toLocaleString();
+  } catch (err) {
+    console.error("방문자 카운트 로드 실패:", err);
+    // 실패 시 로컬 숫자로 대체 표시 (UI 유지)
+    document.getElementById('todayVisits').textContent = "-";
+    document.getElementById('totalVisits').textContent = "-";
   }
-  
-  stats.total++;
-  stats.today++;
-  
-  localStorage.setItem('ht_stats', JSON.stringify(stats));
-  
-  document.getElementById('todayVisits').textContent = stats.today.toLocaleString();
-  document.getElementById('totalVisits').textContent = stats.total.toLocaleString();
 }
 
 function renderGrid(dict) {
