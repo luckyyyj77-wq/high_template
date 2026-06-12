@@ -36,7 +36,11 @@ function setActive(i) {
 function showTemplate(i) {
     index = i;
     const viewer = document.getElementById('viewer');
-    if (viewer) viewer.src = templates[i].file;
+    if (viewer) {
+        // 절대 경로 /templates/... 를 상대 경로 ../../templates/... 로 변환
+        const relPath = templates[i].file.startsWith('/') ? '../../' + templates[i].file.substring(1) : templates[i].file;
+        viewer.src = relPath;
+    }
     document.title = templates[i].title + ' | High Templater';
     setActive(i);
 }
