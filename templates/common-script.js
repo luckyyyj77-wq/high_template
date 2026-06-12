@@ -14,9 +14,9 @@ async function loadTemplates() {
         item.style.setProperty('--accent', t.color);
         item.style.setProperty('--accent-light', t.color + '33');
         
-        // 썸네일 경로: t.file이 /templates/cat/templateN/index.html 형식이므로 
-        // 같은 폴더의 preview1.png를 찾도록 함 (없으면 onerror 처리)
-        const thumbSrc = t.file.replace('index.html', 'preview1.png');
+        // 경로 보정: /templates/... 형식을 상대 경로 ../../templates/... 로 변경
+        const absFile = t.file.startsWith('/') ? t.file.substring(1) : t.file;
+        const thumbSrc = '../../' + absFile.replace('index.html', 'preview1.png');
         
         item.innerHTML = `
             <img class="thumb" src="${thumbSrc}" alt="${t.title}" onerror="this.style.opacity=0;">
@@ -59,10 +59,12 @@ if (nextBtn) nextBtn.onclick = () => {
 
 async function copyCode(type) {
     try {
-        const baseUrl = templates[index].file.substring(0, templates[index].file.lastIndexOf('/') + 1);
+        const absFile = templates[index].file.startsWith('/') ? templates[index].file.substring(1) : templates[index].file;
+        const repoRootFile = '../../' + absFile;
+        const baseUrl = repoRootFile.substring(0, repoRootFile.lastIndexOf('/') + 1);
         let targetFile = '';
         
-        if (type === 'html') targetFile = templates[index].file;
+        if (type === 'html') targetFile = repoRootFile;
         else if (type === 'css') targetFile = baseUrl + 'style.css';
         else if (type === 'js') targetFile = baseUrl + 'script.js';
 
