@@ -12,7 +12,7 @@
   <h1>📱 QR 코드 생성기</h1>
 
   <!-- 🔹 입력 -->
-  <input type="text" id="textInput" placeholder="텍스트나 URL을 입력하세요">
+  <input type="text" id="textInput" placeholder="텍스트나 URL을 입력하세요" value="https://github.com/luckyyyj77-wq/high_template">
   
   <!-- 🔹 옵션 -->
   <div class="options">
@@ -27,7 +27,9 @@
   </div>
 
   <!-- 🔹 QR 미리보기 -->
-  <canvas id="qrCanvas" width="200" height="200"></canvas>
+  <div id="qr-result" style="margin: 20px 0;">
+    <canvas id="qrCanvas"></canvas>
+  </div>
 
   <!-- 🔹 버튼 -->
   <div class="btns">
@@ -36,6 +38,7 @@
   </div>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

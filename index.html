@@ -130,7 +130,30 @@ const categories = [
  {emoji:"🎨",title:"Creative",desc:"실험적 / 예술적 디자인",path:"templates/creative/index.html",color:"#fda4af",key:"cat_creative"}
 ];
 
+// 방문자 카운트 로직
+function updateVisitCount() {
+  const now = new Date();
+  const today = now.toISOString().split('T')[0];
+  
+  let stats = JSON.parse(localStorage.getItem('ht_stats') || '{}');
+  
+  if (!stats.total) stats.total = 0;
+  if (stats.lastVisit !== today) {
+    stats.today = 0;
+    stats.lastVisit = today;
+  }
+  
+  stats.total++;
+  stats.today++;
+  
+  localStorage.setItem('ht_stats', JSON.stringify(stats));
+  
+  document.getElementById('todayVisits').textContent = stats.today.toLocaleString();
+  document.getElementById('totalVisits').textContent = stats.total.toLocaleString();
+}
+
 function renderGrid(dict) {
+  updateVisitCount(); // 그리드 렌더링 시 방문자 수도 업데이트
   const grid = document.getElementById('categoryGrid');
   grid.innerHTML = '';
   categories.forEach(cat=>{
