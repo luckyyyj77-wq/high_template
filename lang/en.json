@@ -5,13 +5,23 @@
   "footer": "© 2025 High Templater. All templates are MIT-licensed.",
 
   "cat_landing": "Landing Page",
+  "cat_landing_desc": "Hero + CTA Landing Pages",
   "cat_portfolio": "Portfolio",
+  "cat_portfolio_desc": "Layouts for Work & Profiles",
   "cat_blog": "Blog / Magazine",
+  "cat_blog_desc": "Article-focused Blog Formats",
   "cat_business": "Business / Company",
+  "cat_business_desc": "Company Intro & Service Pages",
   "cat_login": "Login / Form",
+  "cat_login_desc": "Member Forms & Auth UI",
   "cat_ecommerce": "E-Commerce",
+  "cat_ecommerce_desc": "Product Catalogs & Checkout UI",
   "cat_dashboard": "Dashboard / Admin",
+  "cat_dashboard_desc": "Admin Stats & Monitoring Screens",
   "cat_components": "Components / UI Kit",
+  "cat_components_desc": "UI Component Sets",
   "cat_tools": "Utility Tools",
-  "cat_creative": "Creative / Experimental"
+  "cat_tools_desc": "Utilities & Simple Web Tools",
+  "cat_creative": "Creative / Experimental",
+  "cat_creative_desc": "Experimental & Artistic Designs"
 }

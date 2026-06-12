@@ -5,13 +5,23 @@
   "footer": "© 2025 High Templater. 모든 템플릿은 MIT 라이선스입니다.",
 
   "cat_landing": "랜딩 페이지",
+  "cat_landing_desc": "히어로 + CTA 랜딩페이지",
   "cat_portfolio": "포트폴리오",
+  "cat_portfolio_desc": "작품·프로필 전시용 레이아웃",
   "cat_blog": "블로그 / 매거진",
+  "cat_blog_desc": "글 중심의 블로그 형식",
   "cat_business": "비즈니스 / 회사",
+  "cat_business_desc": "회사 소개 및 서비스 페이지",
   "cat_login": "로그인 / 폼",
+  "cat_login_desc": "회원 폼 및 인증 UI",
   "cat_ecommerce": "이커머스",
+  "cat_ecommerce_desc": "상품카탈로그 및 결제 UI",
   "cat_dashboard": "대시보드 / 어드민",
+  "cat_dashboard_desc": "관리자 통계 / 모니터링 화면",
   "cat_components": "컴포넌트 / UI 킷",
+  "cat_components_desc": "UI 컴포넌트 조합 세트",
   "cat_tools": "유틸리티 툴",
-  "cat_creative": "크리에이티브 / 실험실"
+  "cat_tools_desc": "유틸리티 및 간단한 웹 도구",
+  "cat_creative": "크리에이티브 / 실험실",
+  "cat_creative_desc": "실험적 / 예술적 디자인"
 }

@@ -3,14 +3,16 @@ const HT_LANGS = ['ko','en','es','ja'];
 let HT_CURRENT = localStorage.getItem('ht_lang') || 'ko'; // 기본 한국어
 
 function langPath(lang){
-  // 루트 기준 고정 경로 (하위 폴더에서도 정상 동작)
-  return `${location.origin}/lang/${lang}.json`;
+  // 상위 폴더로 이동하여 lang 폴더를 찾도록 수정 (하위 폴더 깊이에 상관없이 작동하도록 절대경로 활용 권장)
+  // 여기서는 단순함을 위해 루트 상대 경로 사용
+  return `/lang/${lang}.json`;
 }
 
 async function loadLang(lang){
   try{
-    const res = await fetch(langPath(lang), { cache: 'no-store' });
-    if(!res.ok) throw new Error(`lang load failed: ${lang}`);
+    const path = langPath(lang);
+    const res = await fetch(path);
+    if(!res.ok) throw new Error(`lang load failed: ${lang} at ${path}`);
     const dict = await res.json();
 
     // 본문 텍스트 번역
