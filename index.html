@@ -106,8 +106,12 @@ footer{
 
 <main id="categoryGrid"></main>
 
-<footer data-i18n="footer">
-  © 2025 High Templater. 템플릿은 자유롭게 사용·수정할 수 있습니다.
+<footer style="margin-top: 40px; padding: 20px; border-top: 1px solid #eee;">
+  <div class="visit-counter" style="margin-bottom: 10px; font-size: 0.9rem; color: #666; font-family: monospace;">
+    TODAY: <span id="todayVisits" style="color: #2563eb; font-weight: bold;">0</span> | 
+    TOTAL: <span id="totalVisits" style="color: #2563eb; font-weight: bold;">0</span>
+  </div>
+  <p data-i18n="footer" style="color: #888; font-size: 0.85rem;">© 2025 High Templater. 템플릿은 자유롭게 사용·수정할 수 있습니다.</p>
 </footer>
 
 <!-- 광고 공간 -->
@@ -115,7 +119,7 @@ footer{
   <p>광고 영역: 이미지, 텍스트, 배너 등 자유롭게 넣으세요.</p>
 </div>
 
-<script src="lang.js?v=2"></script>
+<script src="lang.js?v=3"></script>
 <script>
 const categories = [
  {emoji:"🚀",title:"Landing",desc:"히어로 + CTA 랜딩페이지",path:"templates/landing/index.html",color:"#8f80ff",key:"cat_landing"},
